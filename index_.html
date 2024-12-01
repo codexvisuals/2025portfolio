@@ -1,0 +1,2320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+    <!-- Page Title -->
+    <title>Melissa Cooney - Designer & Developer</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Emeric - awesome coming soon and portfolio template to kick-start your project">
+    <meta name="keywords" content="mix_design, coming soon, under construction, template, landing page, portfolio, one page, responsive, html5, css3, creative, clean, agency, personal page">
+    <meta name="author" content="mix_design">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Melissa Cooney - Designer & Developer">
+    <meta property="og:description" content="Emeric - awesome coming soon and portfolio template to kick-start your project">
+    <meta property="og:url" content="http://mixdesign.club/themeforest/emeric/">
+    <meta property="og:image" content="http://mixdesign.club/themeforest/emeric/img/favicon/og-image.jpg">
+    <!-- Facebook Metadata End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" content="#ededed">
+    <meta name="msapplication-navbutton-color" content="#ededed">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ededed">
+    <!-- Custom Browser Color End -->
+
+    <style>
+      /* Adjust Block Padding */
+      @media only screen and (max-width: 991px) {
+        .inner__media {
+          padding: 0 20px 20px 20px;
+        }
+        .innerdata__blocks {
+          padding-bottom: 30px;
+        }
+      }
+
+      /* Mouse Cursor Animations CSS */
+      .cursor {
+        position: fixed;
+        left: 0;
+        pointer-events: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: #fff;
+        background: #121212;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        z-index: 7;
+        opacity: 0;
+        mix-blend-mode: hard-light;
+        transition: all .3s;
+      }
+      .cursor.large {
+        width: 180px;
+        height: 180px;
+        text-align: center;
+        font-size: 19px;
+        font-weight: 400;
+      }
+      .cursor1 {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #c9f31d;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: .15s;
+        z-index: 11;
+        mix-blend-mode: difference;
+      }
+      @media(max-width: 1200px) {
+        .cursor1 {
+          display: none;
+        }
+      }
+      .cursor1.hide {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .cursor2 {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        background-color: #c9f31d;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: .2s;
+        z-index: 11;
+        mix-blend-mode: difference;
+      }
+      @media(max-width: 1200px) {
+        .cursor2 {
+          display: none;
+        }
+      }
+      .cursor2.hide {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .cursor2.circle {
+        width: 60px;
+        height: 60px;
+      }
+      
+      /* Portfolio Filter Button CSS */
+        .filter-btn .rounded-tag {      
+            height: 6rem;
+            border-radius: 3.2rem;
+            padding: 0 2rem;
+            font: normal 500 1.8rem / 5.8rem "Manrope", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.06rem;
+            position: relative;
+            display: inline-block;
+            background: transparent; /* Transparent background by default */
+            color: #131417; /* Default text color */
+            transition: color 0.3s ease-in-out;
+            border: 1px solid #131417; /* White outline by default */
+            overflow: hidden; /* Ensure pseudo-element is clipped */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            z-index: 0;
+        }
+        .filter-btn .rounded-tag .fill-background {
+            position: absolute;
+            top: -1px; /* Adjust to align perfectly with border */
+            left: -1px; /* Adjust to align perfectly with border */
+            width: calc(100% + 2px); /* Adjust to cover the entire area including border */
+            height: calc(100% + 2px); /* Adjust to cover the entire area including border */
+            background: black;
+            border-radius: 3.2rem; /* Match the border-radius */
+            transform: scale(0);
+            transform-origin: center;
+            -webkit-transition: color 0.3s 0s, background-color 0s 0s, border 0s 0s, -webkit-transform 0.3s ease-in-out;
+            transition: color 0.3s 0s, background-color 0s 0s, border 0s 0s, -webkit-transform 0.3s ease-in-out;
+            -moz-transition: color 0.3s 0s, background-color 0s 0s, border 0s 0s, transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+            transition: color 0.3s 0s, background-color 0s 0s, border 0s 0s, transform 0.3s ease-in-out;
+            transition: color 0.3s 0s, background-color 0s 0s, border 0s 0s, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
+            z-index: -1; /* Ensure background is below the text */
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+        }
+        .filter-btn .rounded-tag::after {
+            content: attr(data-filter); /* Use the button's data-filter attribute as text */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to right, #f0becd 0%, #b3c8f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font: normal 600 1.8rem / 5.8rem "Manrope", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.06rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3.2rem; /* Match the border-radius */
+            z-index: 1; /* Ensure the pseudo-element is above the original text */
+            opacity: 0; /* Hide the gradient text by default */
+            transition: opacity 0.3s ease-in-out;
+        }
+        .filter-btn:hover .rounded-tag .fill-background,
+        .filter-btn:active .rounded-tag .fill-background,
+        .filter-btn:focus .rounded-tag .fill-background {
+            transform: scale(1);
+        }
+        .filter-btn:hover .rounded-tag::after,
+        .filter-btn:active .rounded-tag::after,
+        .filter-btn:focus .rounded-tag::after {
+            opacity: 1; /* Show the gradient text on hover, active, and focus */
+        }
+        .filter-btn:hover .rounded-tag,
+        .filter-btn:active .rounded-tag,
+        .filter-btn:focus .rounded-tag {
+            color: transparent; /* Make original text transparent immediately on hover, active, and focus */
+        }
+
+      .my-gallery__item.animate-in {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s ease-in-out;
+        transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s ease-in-out;
+        -moz-transition: opacity 0.5s 0s, transform 0.5s 0s ease-in-out, -moz-transform 0.5s 0s ease-in-out;
+        transition: opacity 0.5s 0s, transform 0.5s 0s ease-in-out;
+        transition: opacity 0.5s 0s, transform 0.5s 0s ease-in-out, -webkit-transform 0.5s 0s ease-in-out, -moz-transform 0.5s 0s ease-in-out;
+      }
+
+      .my-gallery__item.animate-out {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+
+      /* Portfolio Gallery CSS */
+      .my-gallery__item {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        visibility: visible;
+      }
+
+      .my-gallery__item.fade-out {
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+        pointer-events: none; /* Prevent clicking while fading out */
+      }
+
+      .my-gallery__item.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      .filter-section {
+          padding-bottom: 30px;
+      }
+
+      /* Tools & Utilities Card CSS */
+      .card-small {
+          height:180px;
+      }
+      .card-small .card__tags {
+          justify-content:center;
+          vertical-align: baseline;
+      }
+      img.utility-logo {
+        max-width: 80px;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+        object-fit: contain; 
+        margin: 0 auto 10px auto;
+        vertical-align: top;
+      }
+      
+      .toggle-darkmode .light {
+          color:#ededed;
+      }
+      .toggle-darkmode {
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+    }
+    
+    
+    .toggle-darkmode .btn__text {
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+    }
+    
+
+    
+    @media only screen and (max-width: 767px) {
+        .btn .i-title {
+          display: block;
+          position: relative;
+          line-height: 3.2rem;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0);
+          -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          -moz-transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -moz-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -moz-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+        }
+        .btn .i-hover {
+          display: block;
+          position: absolute;
+          line-height: 3.2rem;
+          top: 0;
+          left: 0;
+          width: 100%;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+              -ms-transform: translateY(100%);
+                  transform: translateY(100%);
+          -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          -moz-transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -moz-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+          transition: transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -webkit-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09), -moz-transform 0.3s cubic-bezier(0.23, 0.65, 0.74, 1.09);
+        }
+        .no-touch .btn:hover .i-title {
+          -webkit-transform: translateY(-100%);
+             -moz-transform: translateY(-100%);
+              -ms-transform: translateY(-100%);
+                  transform: translateY(-100%);
+        }
+        .no-touch .btn:hover .i-hover {
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+              -ms-transform: translateY(0);
+                  transform: translateY(0);
+        }
+        .no-touch .btn:hover .btn__background {
+          -webkit-transform: scale(1.04);
+             -moz-transform: scale(1.04);
+              -ms-transform: scale(1.04);
+                  transform: scale(1.04);
+        }
+    }
+      
+    /* Styles for Dark Mode */ 
+        
+        /* Animated BG Gradient Colors */
+        .darkmode1 .blur:nth-of-type(1) {
+          background: rgba(105, 29, 255, 0.4);
+          height: clamp(400px, 70vw, 70vw);
+          width: -moz-calc(clamp(400px, 70vw, 70vw) * 1.1);
+          width: calc(clamp(400px, 70vw, 70vw) * 1.1);
+          top: 60vh;
+          left: 5vw;
+        }
+        .darkmode1 .blur:nth-of-type(2) {
+          background: rgba(113, 55, 158, 0.6);
+          height: clamp(300px, 46vw, 46vw);
+          width: -moz-calc(clamp(300px, 46vw, 46vw) * 0.75);
+          width: calc(clamp(300px, 46vw, 46vw) * 0.75);
+          top: 30vh;
+          right: 30vw;
+        }
+        .darkmode1 .blur:nth-of-type(3) {
+          background: rgba(63, 54, 161, 0.4);
+          height: clamp(100px, 20vw, 20vw);
+          width: -moz-calc(clamp(100px, 20vw, 20vw) * 2);
+          width: calc(clamp(100px, 20vw, 20vw) * 2);
+          top: -10vh;
+          left: -10vw;
+        }
+        .darkmode1 .fullscreen-bg {
+            background: #131417; /* Control overall BG Color */
+        }
+        body.darkmode1  {
+          background-color: #ededed;
+          color: #131417;
+        }
+        .darkmode1 p.small a {
+            color:#ededed;
+        }
+        .darkmode1 p.small a:hover {
+            color:#ffffff;
+        }
+        /* Scrollbar colors */
+        .darkmode1 ::-webkit-scrollbar-thumb {
+          background-color: #eaa2b7;
+          background: -webkit-gradient(linear, left top, left bottom, from(#71379e), to(#3f36a1));
+          background: linear-gradient(to bottom, #71379e 0%, #3f36a1 100%);
+        }
+        /* Header Darkmode */
+        .darkmode1 .header.blurred .header__content {
+          -webkit-backdrop-filter: blur(14px);
+                  backdrop-filter: blur(14px);
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        .darkmode1 .header__logo span {
+            color: #ededed;
+        }
+        .darkmode1 .header__logo img {
+                      filter: invert(1) brightness(2); /* This will change the SVG color to white */
+        }
+        
+        @media only screen and (min-width: 992px) {
+          .darkmode1 .header.blurred .header__buttons {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          .darkmode1 .header.inner-is-visible .header__buttons {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+        }
+        .darkmode1 .navigation li, .darkmode1 .navigation li a {
+          color: #ededed;
+        }
+
+        /* Typography Darkmode */
+        .darkmode1 h1, .darkmode1 h2, .darkmode1 h3, .darkmode1 h4, .darkmode1 h5 {
+          color: #ededed;
+        }
+
+        /* add class 'opposite' to times with class of .popup-title__title, .popup-title__text */
+        /* for light paragraphs use the class 'light' */
+        
+        /* Menu Darkmode */
+        .darkmode1 .menudata__title, .darkmode1 .menudata__text, .darkmode1 .menu-trigger {
+          color: #ededed;
+        }
+        .darkmode1 .menu-trigger__background {
+          background-color: #131417;
+        }
+        
+        /* Button Darkmode */
+        .darkmode1 .btn-s-text, .darkmode1 .no-touch .btn-bottom:hover .caption, .darkmode1 .text-link {
+          color: #ededed;
+        }
+        .darkmode1 .text-link {
+            background: -webkit-gradient(linear, left top, right top, from(rgba(158, 158, 158, 0.5)), to(rgba(158, 158, 158, 0.5))), -webkit-gradient(linear, left top, right top, from(#ededed), to(#ededed));
+            background: -moz-linear-gradient(left, rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), -moz-linear-gradient(left, #ededed, #ededed);
+            background: linear-gradient(to right, rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), linear-gradient(to right, #ededed, #ededed);
+            -moz-background-size: 100% 1px, 0 1px;
+            background-size: 100% 1px, 0 1px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            -webkit-transition: background-size 400ms, color 300ms;
+            -moz-transition: background-size 400ms, color 300ms, -moz-background-size 400ms;
+            transition: background-size 400ms, color 300ms;
+            transition: background-size 400ms, color 300ms, -moz-background-size 400ms;
+        }
+        .darkmode1 .text-link:hover {
+            color:#ffffff;
+        }
+        .darkmode1 .btn-bottom .circle {
+            border: 1px solid #aaadb6;
+        }
+        .darkmode1 .btn-bottom .circle path {
+            fill: #ededed;
+        }
+        .darkmode1 .btn-bottom:hover, .darkmode1 .btn-bottom:hover .caption {
+            color: #ffffff;
+        }
+        .darkmode1 .btn-bottom:hover path {
+            fill: #ffffff;
+        }
+        .darkmode1 .btn-bottom .caption {
+            color: #aaadb6;
+        }
+        
+        .darkmode1 .filter-btn .rounded-tag {      
+            color: #ededed; /* Default text color */
+            border: 1px solid #ededed; /* White outline by default */
+        }
+        .darkmode1 .filter-btn .rounded-tag .fill-background {
+            background: white;
+        }
+        .darkmode1 .filter-btn .rounded-tag::after {
+            background: linear-gradient(to right, #71379e 0%, #3f36a1 100%);
+        }
+        
+        /* Socials Darkmode */
+        .darkmode1 .socials-mobile {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        .darkmode1 .socials-mobile ul li a {
+          color: #ededed;
+        }
+
+        /* Inner Section Darkmode */
+        .darkmode1 .card-gradient {
+          background: -webkit-gradient(linear, left top, right top, from(#71379e), to(#3f36a1));
+          background: -moz-linear-gradient(left, #71379e 0%, #3f36a1 100%);
+          background: linear-gradient(to right, #71379e 0%, #3f36a1 100%);
+        }
+        .darkmode1 .card-white {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        .darkmode1 .decor {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        .darkmode1 .rounded-tag {
+            color: #ededed;
+            border-color: #ededed;
+        }
+
+        /* Skillbar Darkmode */
+        .darkmode1 .skillbar {
+          border-bottom: 2px solid rgba(233, 234, 237, 0.1);
+        }
+        .darkmode1 .skillbar-title {
+          color: #ededed;
+        }
+        .darkmode1 .skillbar-bar {
+          background-color: #ededed;
+        }
+        .darkmode1 .skill-bar-percent {
+          color: #ededed;
+        }
+
+        /* Contact Info Darkmode */
+        .darkmode1 .contactdata__socials, .darkmode1 .contactdata__socials li, .darkmode1 .contactdata__socials li a {
+          color: #ededed;
+        }
+        
+        /* Marquee CSS */
+        .darkmode1 .marquee span {
+          color: #ededed;
+        }
+        .darkmode1 .marquee span::after, .darkmode1 .nav-star::after {
+          filter: invert(1) brightness(2); /* This will change the SVG color to white */
+        }
+        @media only screen and (min-width: 1400px) {
+          .darkmode1 .marquee.small span::after {
+            filter: invert(1) brightness(2); /* This will change the SVG color to white */
+          }
+        }
+        
+        /* Rotating SVGs Dark Mode */
+        .darkmode1 .inner__name {
+            filter: invert(1) brightness(2); /* This will change the SVG color to white */
+        }
+        
+        
+    .animation-1 {
+        position: absolute;
+        z-index: 1;
+        width: 100%; /* Make the div take full width of the parent */
+        height: 100%; /* Make the div take full height of the parent */
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        pointer-events: none; /* Ensure the animation doesn't interfere with clicking */
+    }
+    
+    .my-gallery__image {
+      width: 100%; /* Make the div take full width of the parent */
+      height: 100%; /* Make the div take full height of the parent */
+      display: flex; /* Flexbox to center the SVG */
+      justify-content: center; /* Horizontally center the SVG */
+      align-items: center; /* Vertically center the SVG */
+    }
+    
+    .animation-1 #logo {
+      max-width: 100%; /* Ensure the SVG scales within the container */
+      max-height: 100%; /* Ensure the SVG doesn't overflow vertically */
+      width: auto; /* Maintain aspect ratio */
+      height: auto; /* Maintain aspect ratio */
+      display: block;
+      margin: auto;
+      pointer-events: none; /* Ignore pointer events so image is still clickable */
+    }
+    
+
+    .animation-1 #dot {
+      animation: bounce-in 1s ease;
+    }
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        r: 0;
+      }
+      25% { 
+        opacity: .5;
+        r: 5;
+      }
+      50% {
+        opacity: 1;
+        r: 12;
+      }
+      70% { r: 8; }
+      100% { r: 10; }
+    }
+    #x-left-bottom, #x-right-bottom, #x-left-top, #x-right-top {
+      stroke-dasharray: 56.57; /* The length of the lines */
+      stroke-dashoffset: 56.57; /* Initial offset to hide the lines */
+      opacity: 1;
+      transition: transform 0.5s; /* Ensure transform changes are animated */
+    }
+
+    </style>
+</head>
+
+<body class="">
+
+  <!-- Loader Start -->
+  <div class="loader">
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__logo">
+          <img src="img/logo.svg" alt="Melissa Cooney - Designer & Developer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Loader End -->
+
+  <div class="cursor1" style=""></div>
+  <div class="cursor2" style=""></div>
+
+  <!-- Gradient Background Start -->
+  <div class="fullscreen-bg">
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+  </div>
+  <!-- Gradient Background End -->
+
+  <!-- Header Start -->
+  <header id="header" class="header">
+
+    <!-- Logo Start -->
+    <div class="header__logo" style="display: flex;">
+      <img src="img/icons/24x24-star.svg" alt="Melissa Cooney - Designer & Developer" style="margin-right: 6px;">
+      <span style="font-size:2.25rem;font-weight:600;text-transform: uppercase;">Melissa Cooney</span>
+    </div>
+    <!-- Logo End -->
+
+    <!-- Header Content Start -->
+    <div class="header__content d-flex align-items-center">
+      <div class="container-fluid px-0 fullheight-mobile">
+        <div class="row gx-0 gx-lg-5 justify-content-end justify-content-xl-start fullheight-mobile">
+          <div class="col-auto col-lg-8 fullheight-mobile">
+
+            <!-- Header Controls Block Start -->
+            <div class="header__buttons d-flex justify-content-end align-items-center">
+
+              <!-- Socials Desktop Start -->
+              <div class="socials-desktop">
+                <!-- Home screen socials links -->
+                <ul class="socials d-flex align-items-start">
+                  <li>
+                    <a class="btn btn-s-text" href="https://dribbble.com/CodexVisuals" target="_blank">
+                      <span class="btn-title">Dribbble</span>
+                      <span class="btn-hover">Dribbble</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-s-text" href="https://github.com/codexvisuals" target="_blank">
+                      <span class="btn-title">Github</span>
+                      <span class="btn-hover">Github</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-s-text" href="https://www.linkedin.com/in/melissa-cooney/" target="_blank">
+                      <span class="btn-title">LinkedIn</span>
+                      <span class="btn-hover">LinkedIn</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Socials Desktop End -->
+              
+
+              <!-- Notify Trigger Start -->
+              <a id="" class="btn btn-s btn-s-icon menu-trigger toggle-darkmode" href="#0">
+                <span class="btn__background dark"></span>
+                <span class="btn__text light">
+                  <i class="fa-solid fa-moon i-title"></i>
+                  <i class="fa-solid fa-moon i-hover"></i>
+                  <em class="btn-title">Dark Mode</em>
+                  <em class="btn-hover">Dark Mode</em>
+                </span>
+              </a>
+              <!-- Notify Trigger End -->
+
+            </div>
+            <!-- Header Controls Block End -->
+
+          </div>
+          <div class="col-auto col-lg-4">
+
+            <!-- Menu Trigger Start -->
+            <div class="header__menu d-flex justify-content-end align-items-center">
+              <a id="menu-trigger" class="btn menu-trigger" href="#0">
+                <span class="menu-trigger__background"></span>
+                <span class="menu-trigger__menu">
+                  <em class="btn-title">Menu</em>
+                  <em class="btn-hover">Menu</em>
+                </span>
+                <span class="menu-trigger__close">
+                  <em class="btn-title">Close</em>
+                  <em class="btn-hover">Close</em>
+                </span>
+              </a>
+            </div>
+            <!-- Menu Trigger End -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header Content End -->
+
+  </header>
+  <!-- Header End -->
+
+  <!-- Menu Start -->
+  <nav id="menu" class="menu">
+    <div class="menu__content d-flex">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 gx-lg-5 fullheight">
+
+          <!--Menu Data Block Start -->
+          <div class="col-12 col-lg-8 menu__data">
+            <div class="menudata__content">
+
+              <!-- Menu Sections Links Start -->
+              <div class="menudata__links">
+                <div class="container-fluid p-0">
+                  <div class="row g-0">
+                    <div class="col-12">
+
+                      <!-- Navigation Start -->
+                      <ul class="navigation">
+                        <li>
+                          <a href="#0" id="home-trigger" class="navigation__link" data-ref="home">
+                            <span class="nav-star"></span>
+                            <span class="nav-caption">Home</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" id="about-trigger" class="navigation__link" data-ref="about">
+                            <span class="nav-star"></span>
+                            <span class="nav-caption">About Me</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" id="works-trigger" class="navigation__link" data-ref="works">
+                            <span class="nav-star"></span>
+                            <span class="nav-caption">Portfolio</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" id="contact-trigger" class="navigation__link" data-ref="contact">
+                            <span class="nav-star"></span>
+                            <span class="nav-caption">Contact</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <!-- Navigation End -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Menu Sections Links End -->
+
+              <!-- Menu Contact Links Start -->
+              <div class="menudata__contact">
+                <div class="container-fluid px-0">
+                  <div class="row gx-0 gx-lg-5">
+                    <div class="col-12 col-lg-4 menudata__item">
+                      <p class="menudata__title">Let's talk:</p>
+                      <p class="menudata__text">
+                        <a class="contact-link" href="mailto:hello@melissacooney.dev?subject=Message%20from%20your%20site">hello@melissacooney.dev</a>
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-8 menudata__item">
+                      <p class="menudata__title">Available:</p>
+                      <p class="menudata__text">
+                        <a class="contact-link" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA">Remotely or Onsite in Eugene, Oregon</a>
+                      </p>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <!-- Menu Contact Links End -->
+
+            </div>
+          </div>
+          <!--Menu Data Block End -->
+
+          <!--Menu Media Block Start -->
+          <div class="col-12 col-lg-4 menu__media">
+            <div class="media__content border-radius-l">
+
+              <!-- Menu Image Background Start -->
+              <div class="menu__image menu-image-1"></div>
+              <!-- Menu Image Background End -->
+
+            </div>
+          </div>
+          <!--Menu Media Block End-->
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Menu End -->
+
+  <!-- Main Section Start -->
+  <section id="main" class="main active">
+    <div class="main__content d-flex">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 gx-lg-5 fullheight">
+
+          <!-- Main Section Intro Start -->
+          <div class="col-12 col-lg-8 main__intro">
+
+            <!-- Intro Content Start -->
+            <div class="intro__content">
+
+              <!-- Headline Start -->
+              <div id="headline" class="headline">
+                <h1 class="headline__title">Full Stack Web Developer  +  3D Web Designer  +  Shopify Expert</h1>
+                <div class="headline__btnholder d-flex">
+                  <a href="#0" id="download-cv" class="btn-bottom download">
+                    <span class="circle">
+                      <i class="circle__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 25 25">
+                          <path fill="#393C44" d="M25,4.8V24v1h-1H3.8v-1h19.5L0,0.7L0.7,0L24,23.3V4.8H25z"/>
+                        </svg>
+                      </i>
+                    </span>
+                    <span class="caption">Download CV</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Headline End -->
+
+            </div>
+            <!-- Intro Content End -->
+
+          </div>
+          <!-- Main Section Intro End -->
+
+          <!-- Main Section Media Start -->
+          <div class="col-12 col-lg-4 main__media">
+
+            <!-- Media Content Start -->
+            <div class="media__content border-radius-l">
+
+              <!-- Image Background Start -->
+              <div class="media__image"></div>
+              <!-- Image Background End -->
+
+              <!-- Main Section Split Swiper Slider Start -->
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide split-slide split-slide-1"></div>
+                  <div class="swiper-slide split-slide split-slide-2"></div>
+                  <div class="swiper-slide split-slide split-slide-3"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination split-slider-pagination-emeric d-flex align-items-center justify-content-center"></div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev split-slider-btn-emeric split-slider-btn-emeric-prev">
+                  <span class="circle"></span>
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next split-slider-btn-emeric split-slider-btn-emeric-next">
+                  <span class="circle"></span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+              <!-- Main Section Split Swiper Slider End -->
+
+            </div>
+            <!-- Media Content End -->
+
+          </div>
+          <!-- Main Section Media End -->
+
+          <!-- Socials Mobile Start -->
+          <div class="col-12 socials-mobile border-radius-l">
+            <ul>
+              <li>
+                <a href="https://dribbble.com/CodexVisuals" target="_blank">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/codexvisuals" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/melissa-cooney/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Socials Mobile End -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Main Section End -->
+
+  <!-- About Me Section Start -->
+  <section id="about" class="inner about">
+    <div class="inner__content d-flex">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 gx-lg-5 fullheight">
+  
+          <!-- Inner Data Start -->
+          <div class="col-12 col-lg-8 inner__data">
+
+            <!-- Inner Section Blocks Start -->
+            <div class="innerdata__blocks">
+  
+              <!-- Scroll Blocks (Desktop) Start -->
+              <div class="blocks__scroll">
+
+                <!-- Inner Container - Section Title Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12">
+                          <h2 class="inner__title">The intersection of art and technology.</h2>
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <img class="inner__name" src="img/svg/section-name-about.svg" alt="About Me">
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <p class="inner__text">
+                                Passionate about web development and all forms of design, I blend creativity with technical expertise to create <span>unique digital experiences.</span> 
+                                With more than <a href="#0" class="text-link">15 years</a> of experience, I specialize in developing responsive, user-friendly websites and web applications. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Section Title End -->
+  
+                <!-- Inner Container - Features & Services Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5 gy-5 align-items-stretch">
+                        <!-- feature single item -->
+                        <div class="col-12 col-xl-8">
+                          <div class="card card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <h4>Full Stack <br>Development</h4>
+                              <div class="card__tags d-flex flex-wrap">
+                                <span class="rounded-tag">Front-End Web Dev</span>
+                                <span class="rounded-tag">Back-End Web Dev</span>
+                                <span class="rounded-tag">UI/UX Design</span>
+                                <span class="rounded-tag">Wireframes</span>
+                                <span class="rounded-tag">Design to Code</span>
+                                <span class="rounded-tag">OAuth 2.0</span>
+                                <span class="rounded-tag">Database Management</span>
+                                <span class="rounded-tag">API Integration</span>
+                                <span class="rounded-tag">Web Hosting</span>
+                                <span class="rounded-tag">Site Migration</span>
+                                <span class="rounded-tag">Amazon Web Servers</span>
+                                <span class="rounded-tag">Wordpress</span>
+                                <span class="rounded-tag">Elementor</span>
+                                <span class="rounded-tag">AJAX</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-12 col-xl-4">
+                          <div class="card card-gradient border-radius-s animate-in-up">
+                            <div class="card__image card-image-2"></div>
+                            <div class="card__title">
+                              <h4>Web<br> Apps</h4>
+                              <div class="card__tags d-flex flex-wrap">
+                                <span class="rounded-tag">Touch Applications</span>
+                                <span class="rounded-tag">SmartHome Dashboards</span>
+                                <span class="rounded-tag">App Deployment</span>
+                                <span class="rounded-tag">I.o.T. Applications</span>
+                                <span class="rounded-tag">Python Automation</span>
+                                <span class="rounded-tag">Interactive Maps</span>
+                                <span class="rounded-tag">Shopify Apps</span>
+                                <a href="https://ifttt.com/"><span class="rounded-tag">IFFFT</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-12 col-xl-4">
+                          <div class="card card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-3"></div>
+                            <div class="card__title">
+                              <h4>3D Web<br> Design</h4>
+                              <div class="card__tags d-flex flex-wrap">
+                                <span class="rounded-tag">Interactive 3D Elements</span>
+                                <span class="rounded-tag">Kinetic Typography</span>
+                                <span class="rounded-tag">Parallax Scrolling</span>
+                                <span class="rounded-tag">Augmented Reality (AR)</span>
+                                <span class="rounded-tag">CAD Jewelry Design</span>
+                                <span class="rounded-tag">WebGL</span>
+                                <span class="rounded-tag">Three.js</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-12 col-xl-8">
+                          <div class="card card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <h4>Shopify <br>Development</h4>
+                              <div class="card__tags d-flex flex-wrap">
+                                <span class="rounded-tag">Store Setup & Launch</span>
+                                <span class="rounded-tag">Liquid Templates</span>
+                                <span class="rounded-tag">Theme Customization</span>
+                                <span class="rounded-tag">Storefront Redesign</span>
+                                <span class="rounded-tag">Advanced Product Customization Interfaces</span>
+                                <span class="rounded-tag">3D Product Interactions</span>
+                                <span class="rounded-tag">Shopify App Development</span>
+                                <span class="rounded-tag">Bespoke Features</span>
+                                <span class="rounded-tag">Merch Stores</span>
+                                <span class="rounded-tag">Metafields & Filters</span>
+                                <span class="rounded-tag">Troubleshooting</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Features & Services End -->
+  
+                <!-- Inner Container - Skills Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="skillbars">
+                      <!-- skillbar single item -->
+                      <div class="show-skillbar">
+                        <div class="skillbar light" data-percent="96">
+                          <span class="skillbar-title light">Front-End Development</span>
+                          <p class="skillbar-bar light" style="width: 96%;"></p>
+                          <span class="skill-bar-percent light">96%</span>
+                        </div>
+                      </div>
+                      <!-- skillbar single item -->
+                      <div class="show-skillbar">
+                        <div class="skillbar light" data-percent="84">
+                          <span class="skillbar-title light">Back-End Development</span>
+                          <p class="skillbar-bar light" style="width: 84%;"></p>
+                          <span class="skill-bar-percent light">90%</span>
+                        </div>
+                      </div>
+                      <!-- skillbar single item -->
+                      <div class="show-skillbar">
+                        <div class="skillbar light" data-percent="90">
+                          <span class="skillbar-title light">Graphic Design</span>
+                          <p class="skillbar-bar light" style="width: 90%;"></p>
+                          <span class="skill-bar-percent light">87%</span>
+                        </div>
+                      </div>
+                      <!-- skillbar single item -->
+                      <div class="show-skillbar">
+                        <div class="skillbar light" data-percent="90">
+                          <span class="skillbar-title light">3D Design / CAD</span>
+                          <p class="skillbar-bar light" style="width: 90%;"></p>
+                          <span class="skill-bar-percent light">98%</span>
+                        </div>
+                      </div>
+                      <!-- skillbar single item -->
+                      <div class="show-skillbar">
+                        <div class="skillbar light" data-percent="90">
+                          <span class="skillbar-title light">Scripting & Automation</span>
+                          <p class="skillbar-bar light" style="width: 90%;"></p>
+                          <span class="skill-bar-percent light">70%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Skills End -->
+                
+                <!-- Inner Container - Tools & Utilities Start -->
+                <div class="blocks__container" id="tools" style="">
+                  <div class="content-block">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5 gy-5 align-items-stretch">
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <img src="img/icons/html5-logo.png" class="utility-logo" alt="HTML5">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">HTML 5</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-gradient border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/css3-logo.png" class="utility-logo" alt="CSS3">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">CSS 3</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-3"></div>
+                            <div class="card__title">
+                              <img src="img/icons/JavaScript-logo.png" class="utility-logo" alt="Javascript">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Javascript</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/Liquid-logo.png" class="utility-logo" alt="Liquid Template Language">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Liquid</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/react-logo.png" class="utility-logo" alt="React Framework">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">React.js</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <img src="img/icons/next-js-logo.svg" class="utility-logo" alt="Next Framework">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Next.js</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-gradient border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/php-logo.svg" class="utility-logo" alt="PHP Scripting Language">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">PHP</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-3"></div>
+                            <div class="card__title">
+                              <img src="img/icons/Vue-logo.png" class="utility-logo" alt="Vue Javascript Framework">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Vue</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <img src="img/icons/node-js.svg" class="utility-logo" alt="Node Javascript Runtime Environment">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Node.js</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/python.svg" class="utility-logo" alt="Python Programming Language">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Python</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-gradient border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <img src="img/icons/Adobe_Photoshop_CC_icon.png" class="utility-logo" alt="Adobe Photoshop">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Photoshop</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-3"></div>
+                            <div class="card__title">
+                              <img src="img/icons/Adobe_Illustrator_CC_icon.svg" class="utility-logo" alt="Adobe Illustrator">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Illustrator</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/rhino-3d-logo.png" class="utility-logo" alt="Rhino 3D">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Rhino 3D</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-gradient border-radius-s animate-in-up">
+                            <div class="card__image card-image-3"></div>
+                            <div class="card__title">
+                              <img src="img/icons/rhinogold-logo.png" class="utility-logo" alt="RhinoGold">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">RhinoGold</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-1"></div>
+                            <div class="card__title">
+                              <img src="img/icons/C4D-Logo.png" class="utility-logo" alt="Maxon Cinema4D">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">Cinema4D</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- feature single item -->
+                        <div class="col-6 col-xl-3">
+                          <div class="card card-small card-white border-radius-s animate-in-up">
+                            <div class="card__image card-image-4"></div>
+                            <div class="card__title">
+                              <img src="img/icons/vscode.svg" class="utility-logo" alt="Visual Studio Code">
+                              <div class="card__tags btn-s-text d-flex flex-wrap">
+                                <span class="btn-title">VS Code</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Tools & Utilities End -->
+                
+                <!-- Inner Container - Marquee Start -->
+                <div class="blocks__container" style="">
+                  <div class="decor" style="padding: 100px 0;">
+                    <!-- Marquee Start -->
+                    <a class="marquee dark marquee-relative link-l-arrow navigation__link" id="portfolio-trigger-marquee" data-ref="works">
+                      <div class="marquee-content scroll">
+                        <span>Portfolio</span>
+                        <span>Portfolio</span>
+                        <span>Portfolio</span>
+                      </div>
+                      <div class="marquee-content scroll">
+                        <span>Portfolio</span>
+                        <span>Portfolio</span>
+                        <span>Portfolio</span>
+                      </div>
+                    </a>
+                    <!-- Marquee End -->
+                  </div>
+                </div>
+                <!-- Inner Container - Marquee End -->
+
+                <!-- Inner Container - Video Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="fullwidth-container">
+                      <div class="showreel showreel-image-1 border-radius-l">
+                        <!-- video background -->
+                        <div class="video-background">
+                          <video id="inner-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="https://dummyimage.com/1920x1080/4d4d4d/636363">
+                            <source type="video/mp4" src="video/about-video.mp4">
+                            <source type="video/webm" src="video/about-video.webm">
+                            <source type="video/ogv" src="video/about-video.ogv">
+                          </video>
+                        </div>
+                        <!-- video trigger -->
+                        <div class="showreel__button">
+                          <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger">
+                            <span class="btn-icon-anim">
+                              <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="35px" viewBox="0 0 30 35">
+                                  <path fill="#494D56" d="M1.1,1.9l13.5,7.8l13.5,7.8l-13.5,7.8L1.1,33.1V17.5V1.9 M0.1,0.2v17.3v17.3l15-8.7l15-8.7l-15-8.7L0.1,0.2
+                                    L0.1,0.2z"/>
+                                </svg>
+                              </i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Video End -->
+
+              </div>
+              <!-- Scroll Blocks (Desktop) End -->
+              
+            </div>
+            <!-- Inner Section Blocks End -->
+
+          </div>
+          <!-- Inner Data End -->
+  
+          <!-- Inner Media Start -->
+          <div class="col-12 col-lg-4 inner__media">
+  
+            <!-- Inner Media Content Start -->
+            <div class="innermedia__content border-radius-l">
+  
+              <!-- Image Background Start -->
+              <div class="innermedia__image innermedia-image-1"></div>
+              <!-- Image Background End -->
+  
+            </div>
+            <!-- Inner Media Content End -->
+  
+          </div>
+          <!-- Inner Media End -->
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Me Section End -->
+
+  <!-- Portfolio Section Start -->
+  <section id="works" class="inner works">
+    <div class="inner__content d-flex">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 gx-lg-5 fullheight">
+  
+          <!-- Inner Data Start -->
+          <div class="col-12 col-lg-8 inner__data">
+
+            <!-- Inner Section Blocks Start -->
+            <div class="innerdata__blocks">
+  
+              <!-- Scroll Blocks (Desktop) Start -->
+              <div class="blocks__scroll">
+
+                <!-- Inner Container - Section Title Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12">
+                          <h2 class="inner__title">Crafting unique digital experiences. Explore my portfolio.</h2>
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <img class="inner__name" src="img/svg/section-name-works.svg" alt="My Portfolio">
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <p class="inner__text">
+                              I create user-centric, responsive designs that not only meet but <a href="#0" class="text-link">exceed</a> client expectations. 
+                              From designing custom <span>Shopify storefronts</span> to developing dynamic <span>web apps</span>, each project showcases my ability to seamlessly blend functionality with aesthetic appeal. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Section Title End -->
+  
+                <!-- Inner Container - Works Gallery Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid px-0 works__gallery">
+                        <div class="row gx-5 gy-5">
+<div class="filter-section">
+  <button class="btn btn-title filter-btn" data-filter="All">
+    <span class="rounded-tag opposite" data-filter="All">
+      <span class="fill-background"></span>
+      All
+    </span>
+  </button>
+  <button class="btn filter-btn" data-filter="Web">
+    <span class="rounded-tag opposite" data-filter="Web">
+      <span class="fill-background"></span>
+      Web
+    </span>
+  </button>
+  <button class="btn filter-btn active" data-filter="3D Design">
+    <span class="rounded-tag opposite" data-filter="3D Design">
+      <span class="fill-background"></span>
+      3D Design
+    </span>
+  </button>
+  <button class="btn filter-btn" data-filter="Apps">
+    <span class="rounded-tag opposite" data-filter="Apps">
+      <span class="fill-background"></span>
+      Apps
+    </span>
+  </button>
+  <button class="btn filter-btn" data-filter="Graphic">
+    <span class="rounded-tag opposite" data-filter="Graphic">
+      <span class="fill-background"></span>
+      Graphic
+    </span>
+  </button>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="container-fluid px-0 works__gallery">
+                      <div class="row gx-5 gy-5 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                          
+                         <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <!-- Embedding SVG animation -->
+
+
+
+                          <a href="/img/portfolio/animation-1.jpg" data-image="/img/portfolio/animation-1.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                          <div class="animation-1" data-size="1000x1000">
+                            <svg id="logo" width="200" height="200" viewBox="0 0 200 200">
+                              <circle id="dot" cx="100" cy="100" r="10" fill="#0D0D0D" />
+                              <line id="x-right-bottom" x1="100" y1="100" x2="120" y2="120" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round" />
+                              <line id="x-left-bottom" x1="100" y1="100" x2="80" y2="120" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round" />
+                              <line id="x-left-top" x1="100" y1="100" x2="80" y2="80" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round" />
+                              <line id="x-right-top" x1="100" y1="100" x2="120" y2="80" stroke="#0D0D0D" stroke-width="15" stroke-linecap="round" />
+                              <line id="slash" x1="108" y1="85" x2="92" y2="115" stroke="#0D0D0D" stroke-width="15" opacity="0" stroke-linecap="round" />
+                            </svg>
+                          </div>
+                            <img src="/img/portfolio/animation-1.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Logo Animation" />
+
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Logo Splash Animation</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Web</span>
+                              <span class="rounded-tag">Animation</span>
+                            </div>
+                            <p class="small">Description of your logo animation project.</p>
+                          </figcaption>
+                        </figure>
+                                                  
+                         <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/Mactye_Jewelers_Website_square.jpg" data-image="/img/portfolio/Mactye_Jewelers_Website_square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Mactye_Jewelers_Website_square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Luxury Shopify Storefront" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Luxury Shopify Store</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Web</span>
+                              <span class="rounded-tag">Graphic</span>
+                              <span class="rounded-tag">Shopify</span>
+                            </div>
+                            <p class="small">            
+                                I built this ecommerce website on the shopify platform for a business I started in December of 2020. The scope of this project covers development, UI/UX design, data entry, legal research, and graphic design. I learned Liquid in order to develop specific templates and sections for this complex project. In addition to Liquid, JavaScript and jQuery were also used in development, alongside the typical HTML, CSS3 and Sass. 
+                                <br><br>
+                                The data entry portion of the project required putting together an invetory of hundreds of products with extensive details, such as carat weight, millimeter size, and diamond clarity grades. For this portion, the tools utilized were Microsoft Excel and Google Sheets. Legal research was required to ensure the website and products are in full compliance with FTC and commerce guidelines at the state and federal level. 
+                                <br><br>
+                                The graphic design involved in this project inlcudes photo retouching, creating assets for the website, and creating content for social media and marketing. Now that this project has ended, I am working on developing holiday promotional marketing material as well as a print-ready digital look book.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/EC_Icons-square.jpg" data-image="/img/portfolio/EC_Icons-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/EC_Icons-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Branded Icons" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4 class="opposite">Branded Icons</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag opposite">Graphic Design</span>
+                              <span class="rounded-tag opposite">Branding</span>
+                            </div>
+                            <p class="small opposite">
+                                This project was for a client that I previously created branding for in 2017. The scope of the project included styling an internal web portal for one of the company's newer offerings. There were many unique constraints to the project, leading to a more graphic approach. I designed a set of core icons that reflected the brand's aesthetic guidelines. This created a more professional look by establishing continuity between the website and the internal web portal for clients.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Apps, Web" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/samsung-GrainRatio.jpg" data-image="/img/portfolio/samsung-GrainRatio.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/samsung-GrainRatio.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Website & App Design" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Website & App Design</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Web</span>
+                              <span class="rounded-tag">Apps</span>
+                            </div>
+                            <p class="small">
+                                GrainRatio.com is a website I created that grew from a small idea: to have all the water ratios for grains and rice in one place. It hosts an index of over 100 grains with water ratio and cook time information, as well as cooking instructions. This website was built using HTML, CSS, PHP, JavaScript, and jQuery. I utilized elements of the bootstrap framework to create a simple, user-friendly interface. Aside from the UI and the development, this project also required me to research and build a grain database. This information in this database has been collected via trusted and reliable sources such as the USDA database, the ESHA database, federal websites from countries around the world, and manufacturers websites.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/brand-card-masonry-square.jpg" data-image="/img/portfolio/brand-card-masonry-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/brand-card-masonry-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Brand Design" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Brand Design</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Graphic Design</span>
+                              <span class="rounded-tag">Branding</span>
+                            </div>
+                            <p class="small">
+                                Eatiocracy is a food lifestyle blog featuring recipes, culinary basics, food photography, kitchen tips and honest product reviews. Branding for this project is still in development, and has since been put on hold dude to COVID-19.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/EC_Devices_portfolio-square.jpg" data-image="/img/portfolio/EC_Devices_portfolio-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/EC_Devices_portfolio-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Wordpress Website" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Wordpress Website</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Web</span>
+                              <span class="rounded-tag">Wordpress</span>
+                              <span class="rounded-tag">Graphic Design</span>
+                              <span class="rounded-tag">Branding</span>
+                            </div>
+                            <p class="small">
+                                This project was for a client that needed an update to their website as well as branding development based on their existing logo. I crafted the branding and included carefully selected colors, fonts and icons. I then created a new website on their existing WordPress platform, which centered around an informative landing page with a slider and other features. The branding was applied to the new website, as well as several promotional materials created after this project.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/Upgreen-brochure-square.jpg" data-image="/img/portfolio/Upgreen-brochure-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Upgreen-brochure-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Pitch Brochure" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Pitch Brochure</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Graphic Design</span>
+                              <span class="rounded-tag">Branding</span>
+                              <span class="rounded-tag">Print Design</span>
+                            </div>
+                            <p class="small">
+                                I created this promotional brochure for a start-up called Upgreen America, for which I also did the branding. This brochure was available on their website as a digital download PDF and also as a printed booklet. It covered the company's mission retrofit buildings through green energy initiatives and PACE legislation. The branding and presentation materials I provided were used at pitch meetings and during client interactions, and were instrumental in the company's buyout in 2017. Being presented with this opportunity on short notice, I also created the written content and copy for all promotional materials.
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/upgreen-laptop-square.jpg" data-image="/img/portfolio/upgreen-laptop-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/upgreen-laptop-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Drupal Website" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Drupal Website</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Web</span>
+                              <span class="rounded-tag">Drupal</span>
+                              <span class="rounded-tag">Branding</span>
+                            </div>
+                            <p class="small">
+                                I created this website for a start-up called Upgreen America, for which I also did the branding. This website was built on the Drupal CMS platform. The tools used in this project include HTML, CSS, JavaScript, PHP, and database management. I was responsible for the graphic design and photo editing on this project which helped create a sense of continuity from the website to the printed materials. Being presented with this opportunity on short notice, I was tasked with putting together the written content and copy for the website. This required research and an understanding of the newly passed PACE legislation, which allowed the company to profit from retrofitting buildings through green energy initiatives. Although the website is no longer up, it was the primary selling tool that influenced the company's buyout in 2017. 
+                            </p>
+                          </figcaption>
+                        </figure>
+                        <!-- works gallery single item -->
+                       <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                          <a href="/img/portfolio/Upgreen-America-Logo-square.jpg" data-image="/img/portfolio/Upgreen-America-Logo-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Upgreen-America-Logo-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Branding & Logo Design" />
+                          </a>
+                          <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
+                            <h4>Branding & Logo Design</h4>
+                            <div class="card__tags d-flex flex-wrap">
+                              <span class="rounded-tag">Graphic Design</span>
+                              <span class="rounded-tag">Logo Design</span>
+                              <span class="rounded-tag">Branding</span>
+                            </div>
+                            <p class="small">
+                                I designed a logo and branding for a start-up called Upgreen America, whose mission is to retrofit buildings through green energy initiatives and PACE legislation. The client's custom branding included business cards, web ready logos, print versions of the same for company merch, letterhead, email signatures, banners and more. 
+                            </p>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Works Gallery End -->
+  
+                <!-- Inner Container - Marquee Start -->
+                <div class="blocks__container">
+                  <div class="decor">
+                    <!-- Marquee Start -->
+                    <a class="marquee small marquee-relative link-l-arrow" href="mailto:hello@melissacooney.dev?subject=Message%20from%20your%20site" target="_blank">
+                      <div class="marquee-content scroll">
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                      </div>
+                      <div class="marquee-content scroll">
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                      </div>
+                    </a>
+                    <!-- Marquee End -->
+                  </div>
+                </div>
+                <!-- Inner Container - Marquee End -->
+
+              </div>
+              <!-- Scroll Blocks (Desktop) End -->
+              
+            </div>
+            <!-- Inner Section Blocks End -->
+
+          </div>
+          <!-- Inner Data End -->
+  
+          <!-- Inner Media Start -->
+          <div class="col-12 col-lg-4 inner__media">
+  
+            <!-- Inner Media Content Start -->
+            <div class="innermedia__content border-radius-l">
+  
+              <!-- Image Background Start -->
+              <div class="innermedia__image innermedia-image-2"></div>
+              <!-- Image Background End -->
+  
+            </div>
+            <!-- Inner Media Content End -->
+  
+          </div>
+          <!-- Inner Media End -->
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section End -->
+
+  <!-- Contact Section Start -->
+  <section id="contact" class="inner contact">
+    <div class="inner__content d-flex">
+      <div class="container-fluid px-0 fullheight">
+        <div class="row gx-0 gx-lg-5 fullheight">
+  
+          <!-- Inner Data Start -->
+          <div class="col-12 col-lg-8 inner__data">
+
+            <!-- Inner Section Blocks Start -->
+            <div class="innerdata__blocks">
+
+              <!-- Scroll Blocks (Desktop) Start -->
+              <div class="blocks__scroll">
+
+                <!-- Inner Container - Section Title Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid px-0">
+                      <div class="row gx-5">
+                        <div class="col-12">
+                          <h2 class="inner__title">Let's create something amazing together.</h2>
+                        </div>
+                        <div class="col-12 col-md-4">
+                          <img class="inner__name" src="img/svg/section-name-contact.svg" alt="About Me">
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <p class="inner__text">Let's get in touch. You can call me or leave a request here. 
+                            I am glad to take your call from <span>8:00 AM PST to 8:00 PM PST</span> Monday to Friday.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Section Title End -->
+  
+                <!-- Inner Container - Contact Data Start -->
+                <div class="blocks__container">
+                  <div class="content-block">
+                    <div class="container-fluid p-0">
+                      <div class="row gx-5 gy-5 align-items-stretch">
+                        <!-- contact data single item -->
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="contactdata__item contactdata-item-1 card-auto card-gradient border-radius-s">
+                            <div class="contactdata__image contactdata-image-1"></div>
+                            <div class="contactdata__title">
+                              <h5>Location</h5>
+                            </div>
+                            <div class="contactdata__descr">
+                              <p class="small light">
+                                <a class="contact-link" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">Available Onsite in<br>Eugene, Oregon</a>
+                              </p>
+                              <p class="small light">
+                                <a class="contact-link" href="https://goo.gl/maps/xap5o3MZBuC6DFHz8" target="_blank">Available Hybrid for<br>The Pacific Northwest</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contact data single item -->
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="contactdata__item contactdata-item-2 card-auto card-white border-radius-s">
+                            <div class="contactdata__image contactdata-image-2"></div>
+                            <div class="contactdata__title">
+                              <h5>Follow me</h5>
+                            </div>
+                            <div class="contactdata__descr">
+                              <ul class="contactdata__socials">
+                                <li>
+                                  <a class="contact-link" href="https://www.dribbble.com/" target="_blank">Dribbble</a>
+                                </li>
+                                <li>
+                                  <a class="contact-link" href="https://www.github.com/" target="_blank">Github</a>
+                                </li>
+                                <li>
+                                  <a class="contact-link" href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                                </li>
+                                <li>
+                                  <a class="contact-link" href="https://codepen.io/" target="_blank">CodePen</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contact data single item -->
+                        <div class="col-12 col-md-6 col-xl-4">
+                          <div class="contactdata__item contactdata-item-3 card-auto card-white border-radius-s">
+                            <div class="contactdata__image contactdata-image-3"></div>
+                            <div class="contactdata__title">
+                              <h5>Contact</h5>
+                            </div>
+                            <div class="contactdata__descr">
+                              <p class="small light">
+                                <a class="contact-link" id="phone-link" href="#">+1 
+                                  <script type="text/javascript">
+                                    var part1 = "541";
+                                    var part2 = "731";
+                                    var part3 = "4942";
+                                    document.write(part1 + "-" + part2 + "-" + part3);
+                                  </script>                                
+                                </a>
+                                <br>
+                              </p>
+                              <p class="small">
+                                <a class="contact-link light" href="mailto:hello@melissacooney.dev?subject=Message%20from%20your%20site">hello@melissacooney.dev</a>
+                                <br>
+                                <a class="contact-link light" href="mailto:melissa@codexvisuals.com?subject=Message%20from%20your%20site">melissa@codexvisuals.com</a>
+                                <br>
+
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Contact Data End -->
+  
+                <!-- Inner Container - Form Start -->
+                <div class="blocks__container">
+                  <!-- h3 title -->
+                  <div class="content-block">
+                    <h3>Just say hello!</h3>
+                    <p class="block__text">Want to know more about my work or reserve my expertise for your next project?
+                      Drop me a line and I'll get back as soon as possible.
+                    </p>
+                  </div>
+                  <!-- contact form -->
+                  <div class="content-block">
+                    <div class="form-container">
+            
+                      <!-- Contact Form Reply Group Start -->
+                      <div class="reply-group">
+                        <i class="fa-solid fa-circle-check reply-group__icon"></i>
+                        <p class="reply-group__title">Done!</p>
+                        <span class="reply-group__text">Thanks for your message. I will get back to you as soon as possible!</span>
+                      </div>
+                      <!-- Contact Form Reply Group End -->
+          
+                      <!-- Contact Form Start -->
+                      <form class="form form-dark contact-form" id="contact-form">
+                        <!-- Hidden Required Fields -->
+                        <input type="hidden" name="project_name" value="My Portfolio Website">
+                        <input type="hidden" name="admin_email" value="admin@melissacooney.dev">
+                        <input type="hidden" name="form_subject" value="Contact Form Message">
+                        <!-- END Hidden Required Fields-->
+                        <div class="container-fluid px-0">
+                          <div class="row gx-5">
+                            <div class="col-12 col-md-6">
+                              <input type="text" name="Name" placeholder="Your Name*" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <input type="text" name="Company" placeholder="Company Name">
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <input type="email" name="E-mail" placeholder="Email Adress*" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                              <input type="tel" name="Phone" placeholder="Phone Number*" required>
+                            </div>
+                            <div class="col-12">
+                              <textarea class="margin-s" name="Message" placeholder="A Few Words*" required></textarea>
+                            </div>
+                            <div class="col-12">
+                              <span class="inputs-description">*Required fields</span>
+                              <button class="btn btn-l" type="submit">
+                                <span class="btn__background dark"></span>
+                                <span class="btn__text light">
+                                  <em class="btn-title">Submit</em>
+                                  <em class="btn-hover">Submit</em>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <!-- Contact Form End  -->
+          
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner Container - Form End -->
+
+                <!-- Inner Container - Marquee Start -->
+                <div class="blocks__container">
+                  <div class="decor">
+                    <!-- Marquee Start -->
+                    <a class="marquee small marquee-relative link-l-arrow" href="mailto:hello@melissacooney.dev?subject=Message%20from%20your%20site" target="_blank">
+                      <div class="marquee-content scroll">
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                      </div>
+                      <div class="marquee-content scroll">
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                        <span>hello@melissacooney.dev</span>
+                      </div>
+                    </a>
+                    <!-- Marquee End -->
+                  </div>
+                </div>
+                <!-- Inner Container - Marquee End -->
+  
+              </div>
+              <!-- Scroll Blocks (Desktop) End -->
+              
+            </div>
+            <!-- Inner Section Blocks End -->
+
+          </div>
+          <!-- Inner Data End -->
+  
+          <!-- Inner Media Start -->
+          <div class="col-12 col-lg-4 inner__media">
+  
+            <!-- Inner Media Content Start -->
+            <div class="innermedia__content border-radius-l">
+  
+              <!-- Image Background Start -->
+              <div class="innermedia__image innermedia-image-3"></div>
+              <!-- Image Background End -->
+  
+            </div>
+            <!-- Inner Media Content End -->
+  
+          </div>
+          <!-- Inner Media End -->
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section End -->
+
+  <!-- Notify Popup Start -->
+  <div id="notify" class="popup notify">
+    <div class="popup__container">
+
+      <!-- Popup Content Start -->
+      <div class="popup__content border-radius-l">
+        <!-- popup close button -->
+        <a id="notify-close" class="btn btn-s btn-s-icon popup-close" href="#0">
+          <span class="btn__background light"></span>
+          <span class="btn__text dark">
+            <i class="fa-solid fa-xmark"></i>
+            <em class="btn-title">Close</em>
+            <em class="btn-hover">Close</em>
+          </span>
+        </a>
+
+        <!-- Notify Popup Title Start -->
+        <div class="popup-title">
+          <p class="popup-title__title">Get to know about our launch</p>
+          <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the launch of our brand new site</p>
+        </div>
+        <!-- Notify Popup Title End -->
+
+        <!-- Notify Form Container Start -->
+        <div class="form-container">
+
+          <!-- Reply Messages Start-->
+          <div class="reply-group subscription-ok">
+            <i class="fa-solid fa-circle-check reply-group__icon"></i>
+            <p class="reply-group__title txt-light">Done!</p>
+            <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
+          </div>
+          <div class="reply-group subscription-error">
+            <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
+            <p class="reply-group__title">Ooops!</p>
+            <span class="reply-group__text">Something went wrong. Please try again later.</span>
+          </div>
+          <!-- Reply Messages End-->
+
+          <!-- Notify Contact Form Start-->
+          <form class="form notify-form">
+            <input class="margin-l" type="email" placeholder="Your Email" required>
+            <button class="btn btn-l" type="submit">
+              <span class="btn__background dark"></span>
+              <span class="btn__text light">
+                <em class="btn-title">Submit</em>
+                <em class="btn-hover">Submit</em>
+              </span>
+            </button>
+          </form>
+          <!-- Notify Contact Form End-->
+
+        </div>
+        <!-- Notify Form Container End -->
+
+      </div>
+      <!-- Popup Content End -->
+
+    </div>
+  </div>
+  <!-- Notify Popup End -->
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+    It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+      <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader-active when preloader is running -->
+          <div class="pswp__preloader">
+                  <div class="pswp__preloader__icn">
+                    <div class="pswp__preloader__cut">
+                      <div class="pswp__preloader__donut"></div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+          </div>
+
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+
+          <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="cursor cursor1"></div>
+  <div class="cursor cursor2"></div>
+
+  <!-- Click-to-Copy Phone Number Script -->
+  <script type="text/javascript">
+    var part1 = "541";
+    var part2 = "731";
+    var part3 = "4942";
+    var phoneNumber = "+1 " + part1 + "-" + part2 + "-" + part3;
+    document.getElementById('phone-link').innerText = phoneNumber;
+
+    document.getElementById('phone-link').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Create a temporary textarea element to hold the phone number
+        var tempInput = document.createElement('textarea');
+        tempInput.value = phoneNumber;
+        document.body.appendChild(tempInput);
+
+        // Select and copy the text
+        tempInput.select();
+        document.execCommand('copy');
+
+        // Remove the temporary textarea element
+        document.body.removeChild(tempInput);
+
+        // Provide feedback to the user
+        alert('Phone number copied to clipboard: ' + phoneNumber);
+    });
+  </script>
+
+  <!-- Mouse Cursor Animations Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cursor1 = document.querySelector('.cursor1');
+      const cursor2 = document.querySelector('.cursor2');
+
+      document.addEventListener('mousemove', function(e) {
+        try {
+          // Use gsap.to() for continuous animations and prevent overwriting other animations
+          gsap.to(cursor1, {
+            x: e.clientX,
+            y: e.clientY,
+            ease: "power2.out",
+            overwrite: false
+          });
+          
+          gsap.to(cursor2, {
+            x: e.clientX,
+            y: e.clientY,
+            ease: "power2.out",
+            overwrite: false
+          });
+        } catch (e) {
+          console.log(e);
+        }
+      });
+    });
+  </script>
+
+
+  <script src="js/libs.min.js"></script>
+  <script src="js/gallery-init.js"></script>
+  <script src="js/custom.js"></script>
+ 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.my-gallery__item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const filterValue = button.getAttribute('data-filter');
+
+          // Create a GSAP timeline
+          const tl = gsap.timeline();
+
+          // Animate the removal of items
+          galleryItems.forEach(item => {
+            const tags = item.getAttribute('data-tags').split(', ');
+            if (!(filterValue === 'all' || tags.includes(filterValue))) {
+              tl.to(item, {
+                opacity: 0,
+                y: 20,
+                duration: 0.5,
+                onComplete: () => {
+                  item.style.display = 'none';
+                  item.style.visibility = 'hidden';
+                  item.classList.remove('fade-in');
+                  item.classList.add('fade-out');
+                }
+              }, 0);
+            }
+          });
+
+          // Animate the addition of items after removal is complete
+          tl.add(() => {
+            galleryItems.forEach(item => {
+              const tags = item.getAttribute('data-tags').split(', ');
+              if (filterValue === 'all' || tags.includes(filterValue)) {
+                item.style.display = 'block';
+                item.style.visibility = 'visible';
+                setTimeout(() => {
+                  item.classList.remove('fade-out');
+                  item.classList.add('fade-in');
+                  gsap.fromTo(item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+                }, 10); // Small delay to ensure visibility is applied before adding the class
+              }
+            });
+          });
+        });
+      });
+
+      initPhotoSwipeFromDOM('.my-gallery');
+    });
+    
+    
+$('.filter-btn .rounded-tag')
+  .on('mouseenter', function(e) {
+    var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+    $(this).find('.fill-background').css({transformOrigin: `${relX}px ${relY}px`});
+  })
+  .on('mouseout', function(e) {
+    var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+    $(this).find('.fill-background').css({transformOrigin: `${relX}px ${relY}px`});
+  });
+
+
+// Darkmode Toggler
+function restartAnimations() {
+    // Select all elements that you want to animate
+    const elements = document.querySelectorAll('.animate-in');
+
+    // Remove the animation class
+    elements.forEach(element => {
+        element.classList.remove('animate-in');
+        element.classList.add('animate-out');
+    });
+
+    // Trigger reflow to restart the animation
+    void document.body.offsetWidth;
+
+    // Re-add the animation class
+    elements.forEach(element => {
+        element.classList.remove('animate-out');
+        element.classList.add('animate-in');
+    });
+}
+
+// Toggle dark mode and update button text
+document.querySelector('.toggle-darkmode').addEventListener('click', function() {
+    document.body.classList.toggle('darkmode1');
+
+    // Change button text
+    const btnTitle = document.querySelector('.toggle-darkmode .btn-title');
+    const btnHover = document.querySelector('.toggle-darkmode .btn-hover');
+    const btnText = document.querySelector('.toggle-darkmode .btn__text');
+    const btnBg = document.querySelector('.toggle-darkmode .btn__background');
+    const icons = document.querySelectorAll('.toggle-darkmode i');
+    const pTextElements = document.querySelectorAll('.inner__text');
+
+    if (document.body.classList.contains('darkmode1')) {
+        btnTitle.textContent = 'Light Mode';
+        btnHover.textContent = 'Light Mode';
+        btnText.classList.remove('light');
+        btnText.classList.add('dark');
+        btnBg.classList.remove('dark');
+
+        
+        icons.forEach(icon => {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        });
+
+        pTextElements.forEach(pText => {
+            pText.classList.add('light');
+        });
+
+    } else {
+        btnTitle.textContent = 'Dark Mode';
+        btnHover.textContent = 'Dark Mode';
+        btnText.classList.remove('dark');
+        btnText.classList.add('light');
+        btnBg.classList.add('dark');
+
+        icons.forEach(icon => {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        });
+
+        pTextElements.forEach(pText => {
+            pText.classList.remove('light');
+        });
+    }
+
+    // Restart animations
+    restartAnimations();
+});
+
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const dot = document.getElementById("dot");
+  const xLeftBottom = document.getElementById("x-left-bottom");
+  const xRightBottom = document.getElementById("x-right-bottom");
+  const xLeftTop = document.getElementById("x-left-top");
+  const xRightTop = document.getElementById("x-right-top");
+  const slash = document.getElementById("slash");
+
+  // Create GSAP Timeline with infinite yoyo effect
+  const tl = gsap.timeline({ 
+    defaults: { ease: "power2.inOut" },
+    repeat: -1,  
+    yoyo: true,  
+    repeatDelay: 2,
+  });
+
+  tl.fromTo(dot, { opacity: 0, r: 0 }, { opacity: 1, r: 10, duration: 1, ease: "elastic.out(1.2, 0.3)"})
+    .to(dot, { opacity: 0, duration: 0.3 });
+
+  tl.to([xLeftBottom, xRightBottom, xLeftTop, xRightTop], {
+    strokeDashoffset: 0,
+    opacity: 1,
+    duration: 1,
+  }, "-=1");
+
+  tl.set([xLeftBottom, xRightBottom, xLeftTop, xRightTop], {
+    strokeDashoffset: 0,
+  });
+
+  tl.to("#logo", { 
+    rotation: 720, 
+    duration: 1, 
+    transformOrigin: "center", 
+    ease: "elastic.inOut(1, 0.4)" 
+  }, "+=0");  
+
+  tl.to([xLeftBottom, xLeftTop], { 
+    x: 60, 
+    duration: 0.3, 
+    id: "xMoveLeft"
+  }, "+=0.1") 
+  .to([xRightBottom, xRightTop], { 
+    x: -60, 
+    duration: 0.3, 
+    id: "xMoveRight"
+  }, "-=0.3");
+
+  tl.to(slash, { opacity: 1, duration: 0.5 }, "+=0.5");
+});
+</script>
+
+
+</body>
+
+</html>
