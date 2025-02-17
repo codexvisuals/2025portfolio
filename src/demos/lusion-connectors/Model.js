@@ -3,6 +3,8 @@ import { useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 import { easing } from 'maath';
 
+useGLTF.preload('/dist/assets/c-transformed.glb');
+
 export default function Model({ children, color = 'white', roughness = 0, ...props }) {
   const ref = useRef();
   const { nodes, materials } = useGLTF('/dist/assets/c-transformed.glb');

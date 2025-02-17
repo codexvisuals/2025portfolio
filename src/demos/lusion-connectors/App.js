@@ -1,8 +1,9 @@
-import React, { useReducer, useMemo } from 'react';
+import React, { useReducer, useMemo, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Scene from './Scene';
 import { EffectComposer, N8AO } from '@react-three/postprocessing';
 import { Environment, Lightformer } from '@react-three/drei';
+import useVisibility from '/src/shared/useVisibility';
 
 const accents = ['#3f36a1', '#20ffa0', '#ff4060', '#ffcc00'];
 
@@ -15,11 +16,16 @@ const shuffle = (accent = 0) => [
   { color: accents[accent], roughness: 0.1, accent: true },
   { color: accents[accent], roughness: 0.75, accent: true },
 ];
-
 export default function App() {
+  const canvasRef = useRef(null);
+  const isVisible = useVisibility(canvasRef);
+
   const [accent, click] = useReducer((state) => ++state % accents.length, 0);
 
+  // Generate connectors only when visible
   const connectors = useMemo(() => {
+    if (!isVisible) return []; // Return an empty array when not visible
+
     const shuffled = shuffle(accent);
 
     // Add the glass connector explicitly
@@ -38,17 +44,19 @@ export default function App() {
         },
       },
     ];
-  }, [accent]);
+  }, [accent, isVisible]);
 
   return (
     <Canvas
+      ref={canvasRef}
+      concurrent
       onClick={click}
       shadows
       dpr={[1, 1.5]}
       gl={{ antialias: false }}
       camera={{ position: [0, 0, 20], fov: 20, near: 1, far: 30 }}
     >
-      <Scene connectors={connectors} />
+      {isVisible && <Scene connectors={connectors} />}
 
       <EffectComposer disableNormalPass multisampling={8}>
         <N8AO distanceFalloff={1} aoRadius={1} intensity={4} />

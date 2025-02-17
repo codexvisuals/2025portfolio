@@ -2,6 +2,8 @@ import React from 'react';
 import * as THREE from 'three';
 import { useGLTF, MeshRefractionMaterial } from '@react-three/drei';
 
+useGLTF.preload('/dist/assets/3-stone-transformed.glb');
+
 export default function Ring({ frame, diamonds, env, ...props }) {
   const { nodes, materials } = useGLTF('/dist/assets/3-stone-transformed.glb');
 

@@ -10,13 +10,13 @@ import {
 import { EffectComposer, Bloom, N8AO, ToneMapping } from '@react-three/postprocessing';
 import Ring from './Ring';
 
-console.log('Ring Component:', Ring);
-
-export default function DiamondScene({ frame, diamonds, shadow }) {
+export default function DiamondScene({ mounting, diamonds }) {
   // Use useEnvironment to load the HDR environment map.
   const env = useEnvironment({
     files: 'https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/peppermint_powerplant_2_1k.hdr',
   });
+
+  const shadow = {color: '#000000',}
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function DiamondScene({ frame, diamonds, shadow }) {
       <group position={[0, -0.25, 0]}>
         <Center top position={[0, -0.12, 0]} rotation={[-0.1, 0, 0.085]}>
           {/* Ring component using the environment map for reflections */}
-          <Ring frame={frame} diamonds={diamonds} env={env} scale={0.1} />
+          <Ring frame={mounting} diamonds={diamonds} env={env} scale={0.1} />
         </Center>
         <AccumulativeShadows temporal frames={100} color={shadow} opacity={1.05}>
           <RandomizedLight radius={5} position={[10, 5, -5]} />

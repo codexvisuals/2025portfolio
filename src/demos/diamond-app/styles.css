@@ -1,1 +1,69 @@
 @import url('https://rsms.me/inter/inter.css');
+
+#diamond-app-container
+.diamond-app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Controls Overlay */
+#diamond-app-container
+.diamond-app-container .controls-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+  padding: 10px 0;
+}
+
+/* Control Group Styling */
+#diamond-app-container
+.diamond-app-container .control-group {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#diamond-app-container
+.diamond-app-container .control-group h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Button Styling */
+#diamond-app-container
+.diamond-app-container .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#diamond-app-container
+.diamond-app-container .color-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#diamond-app-container
+.diamond-app-container .color-button.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+#diamond-app-container
+.diamond-app-container .color-button:hover {
+  transform: scale(1.05);
+}

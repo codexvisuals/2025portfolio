@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { HexColorPicker } from "react-colorful";
 import { proxy, useSnapshot } from "valtio";
+import useVisibility from '/src/shared/useVisibility'; // Adjust the path
 
 const state = proxy({
   current: null,
@@ -10,46 +11,31 @@ const state = proxy({
 });
 
 export default function ShoeColorPickerScene() {
-  const [paused, setPaused] = useState(false);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = document.getElementById("shoe-picker-container");
-    containerRef.current = container;
-
-    const parentSection = container.closest("section");
-    if (!parentSection) {
-      console.error("Parent section not found for #shoe-picker-container");
-      return;
-    }
-
-    const observer = new MutationObserver(() => {
-      const isParentActive = parentSection.classList.contains("active");
-      console.log("Parent section active state:", isParentActive);
-      setPaused(!isParentActive);
-    });
-
-    observer.observe(parentSection, { attributes: true, attributeFilter: ["class"] });
-
-    const initialActiveState = parentSection.classList.contains("active");
-    console.log("Initial active state:", initialActiveState);
-    setPaused(!initialActiveState);
-
-    return () => observer.disconnect();
-  }, []);
+  const canvasRef = useRef(null);
+  const isVisible = useVisibility(canvasRef); // Track visibility directly on the Canvas
 
   return (
     <>
-      {!paused && (
-        <Canvas shadows camera={{ position: [2, 0, 3], fov: 50 }}>
-          <ambientLight intensity={0.7} />
-          <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
-          <Shoe paused={paused} />
-          <Environment preset="city" />
-          <ContactShadows position={[0, -0.8, 0]} opacity={0.25} scale={10} blur={1.5} far={0.8} />
-          <OrbitControls enabled={!paused} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
-        </Canvas>
-      )}
+
+    <Canvas
+        ref={canvasRef}
+        shadows
+        camera={{ position: [2, 0, 3], fov: 50 }}
+      >
+        <ambientLight intensity={0.7} />
+        <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
+        {isVisible && <Shoe paused={!isVisible} />}
+        <Environment preset="city" />
+        <ContactShadows position={[0, -0.8, 0]} opacity={0.25} scale={10} blur={1.5} far={0.8} />
+        <OrbitControls
+          enabled={isVisible}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
+          enableZoom={false}
+          enablePan={false}
+        />
+      </Canvas>
+
       <Picker />
     </>
   );
@@ -63,8 +49,7 @@ function Shoe({ paused }) {
 
   // Hover animation and interaction
   useFrame((state) => {
-    if (paused) return; // Skip updates if paused
-
+    if (paused) return; // Skip updates when paused
     const t = state.clock.getElapsedTime();
     ref.current.rotation.set(Math.cos(t / 4) / 8, Math.sin(t / 4) / 8, -0.2 - (1 + Math.sin(t / 1.5)) / 20);
     ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10;

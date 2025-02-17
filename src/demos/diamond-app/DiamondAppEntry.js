@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Loader } from '@react-three/drei';
 import DiamondApp from './DiamondApp';
 
 function loadDiamondApp(container) {
@@ -8,7 +9,11 @@ function loadDiamondApp(container) {
     return;
   }
   const root = createRoot(container);
-  root.render(<DiamondApp />);
+  root.render(
+    <Suspense fallback={<Loader />}>
+      <DiamondApp />
+    </Suspense>
+  );
 }
 
 // Attach loadDiamondApp to the global window object
