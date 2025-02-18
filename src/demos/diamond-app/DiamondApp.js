@@ -22,22 +22,25 @@ export default function DiamondApp() {
               style={{ backgroundColor: '#d4af37' }}
               className={`color-button ${mounting === '#d4af37' ? 'active' : ''}`}
               onClick={() => setMounting('#d4af37')}
+              data-label="Yellow Gold"
             >
-              Gold
+              <label title="Yellow Gold">&nbsp;&nbsp;&nbsp;</label>
             </button>
             <button
               style={{ backgroundColor: '#c0c0c0' }}
               className={`color-button ${mounting === '#c0c0c0' ? 'active' : ''}`}
               onClick={() => setMounting('#c0c0c0')}
+              data-label="White Gold"
             >
-              Silver
+              <label title="White Gold">&nbsp;&nbsp;&nbsp;</label>
             </button>
             <button
-              style={{ backgroundColor: '#b76e79' }}
-              className={`color-button ${mounting === '#b76e79' ? 'active' : ''}`}
-              onClick={() => setMounting('#b76e79')}
+              style={{ backgroundColor: '#dea193' }}
+              className={`color-button ${mounting === '#dea193' ? 'active' : ''}`}
+              onClick={() => setMounting('#dea193')}
+              data-label="Rose Gold"
             >
-              Rose Gold
+              <label title="Rose Gold">&nbsp;&nbsp;&nbsp;</label>
             </button>
           </div>
         </div>
@@ -48,22 +51,25 @@ export default function DiamondApp() {
               style={{ backgroundColor: '#ffffff' }}
               className={`color-button ${diamonds === '#ffffff' ? 'active' : ''}`}
               onClick={() => setDiamonds('#ffffff')}
+              data-label="White"
             >
-              White
+              <label title="White">&nbsp;&nbsp;&nbsp;</label>
             </button>
             <button
               style={{ backgroundColor: '#ffb6c1' }}
               className={`color-button ${diamonds === '#ffb6c1' ? 'active' : ''}`}
               onClick={() => setDiamonds('#ffb6c1')}
+              data-label="Pink"
             >
-              Light Pink
+              <label title="Pink">&nbsp;&nbsp;&nbsp;</label>
             </button>
             <button
-              style={{ backgroundColor: '#fffe40' }}
-              className={`color-button ${diamonds === '#fffe40' ? 'active' : ''}`}
-              onClick={() => setDiamonds('#fffe40')}
+              style={{ backgroundColor: '#fffe73' }}
+              className={`color-button ${diamonds === '#fffe73' ? 'active' : ''}`}
+              onClick={() => setDiamonds('#fffe73')}
+              data-label="Yellow"
             >
-              Canary Yellow
+              <label title="Yellow">&nbsp;&nbsp;&nbsp;</label>
             </button>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useGLTF, MeshRefractionMaterial } from '@react-three/drei';
 
 useGLTF.preload('/dist/assets/3-stone-transformed.glb');
 
-export default function Ring({ frame, diamonds, env, ...props }) {
+export default function Ring({ mounting, diamonds, env, ...props }) {
   const { nodes, materials } = useGLTF('/dist/assets/3-stone-transformed.glb');
 
   if (!nodes || !materials) {
@@ -16,7 +16,8 @@ export default function Ring({ frame, diamonds, env, ...props }) {
     <group {...props} dispose={null}>
       <mesh castShadow geometry={nodes.mesh_0.geometry}>
         <meshStandardMaterial
-          color={frame}
+          attach="material"
+          color={mounting}
           roughness={0.15}
           metalness={1}
           envMapIntensity={1.5}

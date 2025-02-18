@@ -31,7 +31,7 @@ export default function DiamondScene({ mounting, diamonds }) {
       <group position={[0, -0.25, 0]}>
         <Center top position={[0, -0.12, 0]} rotation={[-0.1, 0, 0.085]}>
           {/* Ring component using the environment map for reflections */}
-          <Ring frame={mounting} diamonds={diamonds} env={env} scale={0.1} />
+          <Ring mounting={mounting} diamonds={diamonds} env={env} scale={0.1} />
         </Center>
         <AccumulativeShadows temporal frames={100} color={shadow} opacity={1.05}>
           <RandomizedLight radius={5} position={[10, 5, -5]} />

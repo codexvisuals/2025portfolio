@@ -21,6 +21,7 @@ export default function ShoeColorPickerScene() {
         ref={canvasRef}
         shadows
         camera={{ position: [2, 0, 3], fov: 50 }}
+        onMouseLeave={() => document.body.style.cursor = "auto"} // Reset cursor
       >
         <ambientLight intensity={0.7} />
         <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
@@ -68,7 +69,7 @@ function Shoe({ paused }) {
     <group
       ref={ref}
       onPointerOver={(e) => (e.stopPropagation(), set(e.object.material.name))}
-      onPointerOut={(e) => e.intersections.length === 0 && set(null)}
+      onPointerOut={(e) => (e.intersections.length === 0 && set(null), document.body.style.cursor = "auto")}
       onPointerMissed={() => (state.current = null)}
       onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
       <mesh receiveShadow castShadow geometry={nodes.shoe.geometry} material={materials.laces} material-color={snap.items.laces} />

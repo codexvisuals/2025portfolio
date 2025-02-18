@@ -15,11 +15,13 @@
 #diamond-app-container
 .diamond-app-container .controls-overlay {
   position: absolute;
-  top: 0;
-  width: 100%;
+  top: 60px;
+  min-width: 200px;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 3.6rem;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
   padding: 10px 0;
@@ -29,12 +31,13 @@
 #diamond-app-container
 .diamond-app-container .control-group {
   margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 
 #diamond-app-container
 .diamond-app-container .control-group h3 {
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
   font-size: 16px;
   color: #333;
 }
@@ -44,12 +47,13 @@
 .diamond-app-container .buttons {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 #diamond-app-container
 .diamond-app-container .color-button {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -59,11 +63,11 @@
 
 #diamond-app-container
 .diamond-app-container .color-button.active {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
 
 #diamond-app-container
 .diamond-app-container .color-button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
