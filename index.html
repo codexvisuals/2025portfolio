@@ -29,19 +29,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Template Styles End -->
 
-    <!-- Bouncy Watch Demo Start -->
-    <link rel="stylesheet" href="/src/demos/bouncy-watch/styles.css">
-    <link rel="stylesheet" href="/src/demos/shoe-picker/styles.css">
-    <link rel="stylesheet" href="/src/demos/diamond-app/styles.css">
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="/dist/bouncy-watch.bundle.js"></script>
-    <script src="/dist/shoe-picker.bundle.js"></script>
-    <script src="/dist/lusion-connectors.bundle.js"></script>
-    <script src="/dist/diamond-app.bundle.js"></script>
-    <!-- Bouncy Watch Demo End -->
-
-
     <!-- Custom Browser Color Start -->
     <meta name="theme-color" content="#ededed">
     <meta name="msapplication-navbutton-color" content="#ededed">
@@ -249,13 +236,11 @@
         visibility: hidden;
         pointer-events: none; /* Prevent clicking while fading out */
       }
-
       .my-gallery__item.fade-in {
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
       }
-
       .filter-section {
           padding-bottom: 30px;
       }
@@ -277,7 +262,14 @@
         margin: 0 auto 10px auto;
         vertical-align: top;
       }
-      
+      #gradient-about .rounded-tag,
+      #gradient-about h4,
+      #gradient-about p,
+      #gradient-about span {
+            color: #ededed;
+            border-color: #ededed;
+            mix-blend-mode: difference;
+        }
       .toggle-darkmode .light {
           color:#ededed;
       }
@@ -285,16 +277,12 @@
         -webkit-transition: all 0.6s ease-in-out;
         -moz-transition: all 0.6s ease-in-out;
         transition: all 0.6s ease-in-out;
-    }
-    
-    
-    .toggle-darkmode .btn__text {
-        -webkit-transition: all 0.6s ease-in-out;
-        -moz-transition: all 0.6s ease-in-out;
-        transition: all 0.6s ease-in-out;
-    }
-    
-
+      }
+      .toggle-darkmode .btn__text {
+          -webkit-transition: all 0.6s ease-in-out;
+          -moz-transition: all 0.6s ease-in-out;
+          transition: all 0.6s ease-in-out;
+      }
     
     @media only screen and (max-width: 767px) {
         .btn .i-title {
@@ -470,7 +458,6 @@
         .darkmode1 .btn-bottom .caption {
             color: #aaadb6;
         }
-        
         .darkmode1 .filter-btn .rounded-tag {      
             color: #ededed; /* Default text color */
             border: 1px solid #ededed; /* White outline by default */
@@ -495,6 +482,9 @@
           background: -webkit-gradient(linear, left top, right top, from(#71379e), to(#3f36a1));
           background: -moz-linear-gradient(left, #71379e 0%, #3f36a1 100%);
           background: linear-gradient(to right, #71379e 0%, #3f36a1 100%);
+        }
+        .darkmode1 .card-gradient p {
+          color: #ededed;
         }
         .darkmode1 .card-white {
           background-color: rgba(0, 0, 0, 0.5);
@@ -543,63 +533,57 @@
         .darkmode1 .inner__name {
             filter: invert(1) brightness(2); /* This will change the SVG color to white */
         }
-        
-        
-    .animation-1 {
-        position: absolute;
-        z-index: 1;
-        width: 100%; /* Make the div take full width of the parent */
-        height: 100%; /* Make the div take full height of the parent */
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-        pointer-events: none; /* Ensure the animation doesn't interfere with clicking */
-    }
-    
-    .my-gallery__image {
-      width: 100%; /* Make the div take full width of the parent */
-      height: 100%; /* Make the div take full height of the parent */
-      display: flex; /* Flexbox to center the SVG */
-      justify-content: center; /* Horizontally center the SVG */
-      align-items: center; /* Vertically center the SVG */
-    }
-    
-    .animation-1 #logo {
-      max-width: 100%; /* Ensure the SVG scales within the container */
-      max-height: 100%; /* Ensure the SVG doesn't overflow vertically */
-      width: auto; /* Maintain aspect ratio */
-      height: auto; /* Maintain aspect ratio */
-      display: block;
-      margin: auto;
-      pointer-events: none; /* Ignore pointer events so image is still clickable */
-    }
-    
-
-    .animation-1 #dot {
-      animation: bounce-in 1s ease;
-    }
-    @keyframes bounce-in {
-      0% {
-        opacity: 0;
-        r: 0;
-      }
-      25% { 
-        opacity: .5;
-        r: 5;
-      }
-      50% {
-        opacity: 1;
-        r: 12;
-      }
-      70% { r: 8; }
-      100% { r: 10; }
-    }
-    #x-left-bottom, #x-right-bottom, #x-left-top, #x-right-top {
-      stroke-dasharray: 56.57; /* The length of the lines */
-      stroke-dashoffset: 56.57; /* Initial offset to hide the lines */
-      opacity: 1;
-      transition: transform 0.5s; /* Ensure transform changes are animated */
-    }
+        .animation-1 {
+            position: absolute;
+            z-index: 1;
+            width: 100%; /* Make the div take full width of the parent */
+            height: 100%; /* Make the div take full height of the parent */
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            pointer-events: none; /* Ensure the animation doesn't interfere with clicking */
+        }
+        .my-gallery__image {
+          width: 100%; /* Make the div take full width of the parent */
+          height: 100%; /* Make the div take full height of the parent */
+          display: flex; /* Flexbox to center the SVG */
+          justify-content: center; /* Horizontally center the SVG */
+          align-items: center; /* Vertically center the SVG */
+        }
+        .animation-1 #logo {
+          max-width: 100%; /* Ensure the SVG scales within the container */
+          max-height: 100%; /* Ensure the SVG doesn't overflow vertically */
+          width: auto; /* Maintain aspect ratio */
+          height: auto; /* Maintain aspect ratio */
+          display: block;
+          margin: auto;
+          pointer-events: none; /* Ignore pointer events so image is still clickable */
+        }
+        .animation-1 #dot {
+          animation: bounce-in 1s ease;
+        }
+        @keyframes bounce-in {
+          0% {
+            opacity: 0;
+            r: 0;
+          }
+          25% { 
+            opacity: .5;
+            r: 5;
+          }
+          50% {
+            opacity: 1;
+            r: 12;
+          }
+          70% { r: 8; }
+          100% { r: 10; }
+        }
+        #x-left-bottom, #x-right-bottom, #x-left-top, #x-right-top {
+          stroke-dasharray: 56.57; /* The length of the lines */
+          stroke-dashoffset: 56.57; /* Initial offset to hide the lines */
+          opacity: 1;
+          transition: transform 0.5s; /* Ensure transform changes are animated */
+        }
 
     </style>
 </head>
@@ -928,7 +912,7 @@
                           <h2 class="inner__title">The intersection of art and technology.</h2>
                         </div>
                         <div class="col-12 col-md-4">
-                          <img class="inner__name" src="img/svg/section-name-about.svg" alt="About Me">
+                          <img class="inner__name" src="img/svg/section-name-about.svg" loading="lazy" alt="About Me">
                         </div>
                         <div class="col-12 col-md-8">
                           <p class="inner__text">
@@ -957,7 +941,6 @@
                                 <span class="rounded-tag">Front-End Web Dev</span>
                                 <span class="rounded-tag">Back-End Web Dev</span>
                                 <span class="rounded-tag">UI/UX Design</span>
-                                <span class="rounded-tag">Wireframes</span>
                                 <span class="rounded-tag">Design to Code</span>
                                 <span class="rounded-tag">OAuth 2.0</span>
                                 <span class="rounded-tag">Database Management</span>
@@ -974,13 +957,11 @@
                         </div>
                         <!-- feature single item -->
                         <div class="col-12 col-xl-4">
-                          <div class="card card-gradient border-radius-s animate-in-up">
+                          <div id="gradient-about" class="card card-gradient border-radius-s animate-in-up">
                             <div class="card__image card-image-2"></div>
                             <div class="card__title">
                               <h4>Web<br> Apps</h4>
                               <div class="card__tags d-flex flex-wrap">
-                                <span class="rounded-tag">Touch Applications</span>
-                                <span class="rounded-tag">SmartHome Dashboards</span>
                                 <span class="rounded-tag">App Deployment</span>
                                 <span class="rounded-tag">I.o.T. Applications</span>
                                 <span class="rounded-tag">Python Automation</span>
@@ -1023,10 +1004,8 @@
                                 <span class="rounded-tag">Advanced Product Customization Interfaces</span>
                                 <span class="rounded-tag">3D Product Interactions</span>
                                 <span class="rounded-tag">Shopify App Development</span>
-                                <span class="rounded-tag">Bespoke Features</span>
                                 <span class="rounded-tag">Merch Stores</span>
                                 <span class="rounded-tag">Metafields & Filters</span>
-                                <span class="rounded-tag">Troubleshooting</span>
                               </div>
                             </div>
                           </div>
@@ -1087,7 +1066,7 @@
                 <!-- Inner Container - Skills End -->
                 
                 <!-- Inner Container - Tools & Utilities Start -->
-                <div class="blocks__container" id="tools" style="">
+                <div class="blocks__container" id="tools">
                   <div class="content-block">
                     <div class="container-fluid px-0">
                       <div class="row gx-5 gy-5 align-items-stretch">
@@ -1096,7 +1075,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-1"></div>
                             <div class="card__title">
-                              <img src="img/icons/html5-logo.png" class="utility-logo" alt="HTML5">
+                              <img src="img/icons/html5-logo.png" class="utility-logo" loading="lazy" alt="HTML5">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">HTML 5</span>
                               </div>
@@ -1108,7 +1087,7 @@
                           <div class="card card-small card-gradient border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/css3-logo.png" class="utility-logo" alt="CSS3">
+                              <img src="img/icons/css3-logo.png" class="utility-logo" loading="lazy" alt="CSS3">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">CSS 3</span>
                               </div>
@@ -1120,7 +1099,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-3"></div>
                             <div class="card__title">
-                              <img src="img/icons/JavaScript-logo.png" class="utility-logo" alt="Javascript">
+                              <img src="img/icons/JavaScript-logo.png" class="utility-logo" loading="lazy" alt="Javascript">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Javascript</span>
                               </div>
@@ -1132,7 +1111,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/Liquid-logo.png" class="utility-logo" alt="Liquid Template Language">
+                              <img src="img/icons/Liquid-logo.png" class="utility-logo" loading="lazy" alt="Liquid Template Language">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Liquid</span>
                               </div>
@@ -1144,7 +1123,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/react-logo.png" class="utility-logo" alt="React Framework">
+                              <img src="img/icons/react-logo.webp" class="utility-logo" loading="lazy" alt="React Framework">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">React.js</span>
                               </div>
@@ -1156,7 +1135,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-1"></div>
                             <div class="card__title">
-                              <img src="img/icons/next-js-logo.svg" class="utility-logo" alt="Next Framework">
+                              <img src="img/icons/next-js-logo.svg" class="utility-logo" loading="lazy" alt="Next Framework">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Next.js</span>
                               </div>
@@ -1168,7 +1147,7 @@
                           <div class="card card-small card-gradient border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/php-logo.svg" class="utility-logo" alt="PHP Scripting Language">
+                              <img src="img/icons/php-logo.svg" class="utility-logo" loading="lazy" alt="PHP Scripting Language">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">PHP</span>
                               </div>
@@ -1180,7 +1159,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-3"></div>
                             <div class="card__title">
-                              <img src="img/icons/Vue-logo.png" class="utility-logo" alt="Vue Javascript Framework">
+                              <img src="img/icons/Vue-logo.png" class="utility-logo" loading="lazy" alt="Vue Javascript Framework">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Vue</span>
                               </div>
@@ -1192,7 +1171,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-1"></div>
                             <div class="card__title">
-                              <img src="img/icons/node-js.svg" class="utility-logo" alt="Node Javascript Runtime Environment">
+                              <img src="img/icons/node-js.svg" class="utility-logo" loading="lazy" alt="Node Javascript Runtime Environment">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Node.js</span>
                               </div>
@@ -1204,7 +1183,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/python.svg" class="utility-logo" alt="Python Programming Language">
+                              <img src="img/icons/python.svg" class="utility-logo" loading="lazy" alt="Python Programming Language">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Python</span>
                               </div>
@@ -1216,7 +1195,7 @@
                           <div class="card card-small card-gradient border-radius-s animate-in-up">
                             <div class="card__image card-image-1"></div>
                             <div class="card__title">
-                              <img src="img/icons/Adobe_Photoshop_CC_icon.png" class="utility-logo" alt="Adobe Photoshop">
+                              <img src="img/icons/Adobe_Photoshop_CC_icon.png" class="utility-logo" loading="lazy" alt="Adobe Photoshop">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Photoshop</span>
                               </div>
@@ -1228,7 +1207,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-3"></div>
                             <div class="card__title">
-                              <img src="img/icons/Adobe_Illustrator_CC_icon.svg" class="utility-logo" alt="Adobe Illustrator">
+                              <img src="img/icons/Adobe_Illustrator_CC_icon.svg" class="utility-logo" loading="lazy" alt="Adobe Illustrator">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Illustrator</span>
                               </div>
@@ -1240,7 +1219,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/rhino-3d-logo.png" class="utility-logo" alt="Rhino 3D">
+                              <img src="img/icons/rhino-3d-logo.png" class="utility-logo" loading="lazy" alt="Rhino 3D">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Rhino 3D</span>
                               </div>
@@ -1252,7 +1231,7 @@
                           <div class="card card-small card-gradient border-radius-s animate-in-up">
                             <div class="card__image card-image-3"></div>
                             <div class="card__title">
-                              <img src="img/icons/rhinogold-logo.png" class="utility-logo" alt="RhinoGold">
+                              <img src="img/icons/rhinogold-logo.png" class="utility-logo" loading="lazy" alt="RhinoGold">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">RhinoGold</span>
                               </div>
@@ -1264,7 +1243,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-1"></div>
                             <div class="card__title">
-                              <img src="img/icons/C4D-Logo.png" class="utility-logo" alt="Maxon Cinema4D">
+                              <img src="img/icons/C4D-Logo.png" class="utility-logo" loading="lazy" alt="Maxon Cinema4D">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">Cinema4D</span>
                               </div>
@@ -1276,7 +1255,7 @@
                           <div class="card card-small card-white border-radius-s animate-in-up">
                             <div class="card__image card-image-4"></div>
                             <div class="card__title">
-                              <img src="img/icons/vscode.svg" class="utility-logo" alt="Visual Studio Code">
+                              <img src="img/icons/vscode.svg" class="utility-logo" loading="lazy" alt="Visual Studio Code">
                               <div class="card__tags btn-s-text d-flex flex-wrap">
                                 <span class="btn-title">VS Code</span>
                               </div>
@@ -1358,14 +1337,12 @@
             <!-- Inner Media Content Start -->
             <div class="innermedia__content border-radius-l">
   
-              <!-- Diamond App Component Container Start -->
-              <div id="diamond-app-container" class="innermedia__image innermedia-image-1">
-                <div id="diamond-app-placeholder">
+              <div class="innermedia__image innermedia-image-1">
+                <div>
                   <!-- Placeholder image or loading content -->
-                  <img src="img/placeholder.jpg" alt="Loading Diamond App..." />
+                  <img src="img/placeholder.jpg" alt="" />
                 </div>
               </div>
-              <!-- Diamond App Component Container End -->
   
             </div>
             <!-- Inner Media Content End -->
@@ -1403,7 +1380,7 @@
                           <h2 class="inner__title">Crafting unique digital experiences. Explore my portfolio.</h2>
                         </div>
                         <div class="col-12 col-md-4">
-                          <img class="inner__name" src="img/svg/section-name-works.svg" alt="My Portfolio">
+                          <img class="inner__name" src="img/svg/section-name-works.svg" loading="lazy" alt="My Portfolio">
                         </div>
                         <div class="col-12 col-md-8">
                           <p class="inner__text">
@@ -1465,7 +1442,7 @@
 
 
 
-                          <a href="/img/portfolio/animation-1.jpg" data-image="/img/portfolio/animation-1.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                          <a href="/img/portfolio/animation-1.webp" data-image="/img/portfolio/animation-1.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
                           <div class="animation-1" data-size="1000x1000">
                             <svg id="logo" width="200" height="200" viewBox="0 0 200 200">
                               <circle id="dot" cx="100" cy="100" r="10" fill="#0D0D0D" />
@@ -1476,7 +1453,7 @@
                               <line id="slash" x1="108" y1="85" x2="92" y2="115" stroke="#0D0D0D" stroke-width="15" opacity="0" stroke-linecap="round" />
                             </svg>
                           </div>
-                            <img src="/img/portfolio/animation-1.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Logo Animation" />
+                            <img src="/img/portfolio/animation-1.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Logo Animation" />
 
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
@@ -1485,14 +1462,14 @@
                               <span class="rounded-tag">Web</span>
                               <span class="rounded-tag">Animation</span>
                             </div>
-                            <p class="small">Description of your logo animation project.</p>
+                            <p class="small">Web-friendly logo animation.</p>
                           </figcaption>
                         </figure>
                                                   
                          <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/Mactye_Jewelers_Website_square.jpg" data-image="/img/portfolio/Mactye_Jewelers_Website_square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/Mactye_Jewelers_Website_square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Luxury Shopify Storefront" />
+                          <a href="/img/portfolio/Mactye_Jewelers_Website_square.webp" data-image="/img/portfolio/Mactye_Jewelers_Website_square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Mactye_Jewelers_Website_square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Luxury Shopify Storefront" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Luxury Shopify Store</h4>
@@ -1512,8 +1489,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/EC_Icons-square.jpg" data-image="/img/portfolio/EC_Icons-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/EC_Icons-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Branded Icons" />
+                          <a href="/img/portfolio/EC_Icons-square.webp" data-image="/img/portfolio/EC_Icons-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/EC_Icons-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Branded Icons" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4 class="opposite">Branded Icons</h4>
@@ -1528,8 +1505,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Apps, Web" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/samsung-GrainRatio.jpg" data-image="/img/portfolio/samsung-GrainRatio.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/samsung-GrainRatio.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Website & App Design" />
+                          <a href="/img/portfolio/samsung-GrainRatio.webp" data-image="/img/portfolio/samsung-GrainRatio.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/samsung-GrainRatio.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Website & App Design" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Website & App Design</h4>
@@ -1544,8 +1521,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/brand-card-masonry-square.jpg" data-image="/img/portfolio/brand-card-masonry-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/brand-card-masonry-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Brand Design" />
+                          <a href="/img/portfolio/brand-card-masonry-square.webp" data-image="/img/portfolio/brand-card-masonry-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/brand-card-masonry-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Brand Design" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Brand Design</h4>
@@ -1560,8 +1537,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/EC_Devices_portfolio-square.jpg" data-image="/img/portfolio/EC_Devices_portfolio-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/EC_Devices_portfolio-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Wordpress Website" />
+                          <a href="/img/portfolio/EC_Devices_portfolio-square.webp" data-image="/img/portfolio/EC_Devices_portfolio-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/EC_Devices_portfolio-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Wordpress Website" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Wordpress Website</h4>
@@ -1578,8 +1555,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/Upgreen-brochure-square.jpg" data-image="/img/portfolio/Upgreen-brochure-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/Upgreen-brochure-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Pitch Brochure" />
+                          <a href="/img/portfolio/Upgreen-brochure-square.webp" data-image="/img/portfolio/Upgreen-brochure-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Upgreen-brochure-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Pitch Brochure" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Pitch Brochure</h4>
@@ -1595,8 +1572,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Web, Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/upgreen-laptop-square.jpg" data-image="/img/portfolio/upgreen-laptop-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/upgreen-laptop-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Drupal Website" />
+                          <a href="/img/portfolio/upgreen-laptop-square.webp" data-image="/img/portfolio/upgreen-laptop-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/upgreen-laptop-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Drupal Website" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Drupal Website</h4>
@@ -1612,8 +1589,8 @@
                         </figure>
                         <!-- works gallery single item -->
                        <figure class="col-12 col-md-6 my-gallery__item" data-tags="Graphic" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                          <a href="/img/portfolio/Upgreen-America-Logo-square.jpg" data-image="/img/portfolio/Upgreen-America-Logo-square.jpg" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
-                            <img src="/img/portfolio/Upgreen-America-Logo-square.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Branding & Logo Design" />
+                          <a href="/img/portfolio/Upgreen-America-Logo-square.webp" data-image="/img/portfolio/Upgreen-America-Logo-square.webp" class="my-gallery__link border-radius-l" itemprop="contentUrl" data-size="1000x1000">
+                            <img src="/img/portfolio/Upgreen-America-Logo-square.webp" class="my-gallery__image" itemprop="thumbnail" loading="lazy" alt="Branding & Logo Design" />
                           </a>
                           <figcaption class="my-gallery__description border-radius-l" itemprop="caption description">
                             <h4>Branding & Logo Design</h4>
@@ -1671,14 +1648,12 @@
             <!-- Inner Media Content Start -->
             <div class="innermedia__content border-radius-l">
   
-              <!-- Shoe Picker Component Container Start -->
-              <div id="shoe-picker-container" class="innermedia__image innermedia-image-2">
-                <div id="shoe-picker-placeholder">
+              <div class="innermedia__image innermedia-image-2">
+                <div>
                   <!-- Placeholder image or loading content -->
-                  <img src="img/placeholder.jpg" alt="Loading Shoe Customizer..." />
+                  <img src="img/placeholder.jpg" alt="" />
                 </div>
               </div>
-              <!-- Shoe Picker Component Container End -->
   
             </div>
             <!-- Inner Media Content End -->
@@ -1716,7 +1691,7 @@
                           <h2 class="inner__title">Let's create something amazing together.</h2>
                         </div>
                         <div class="col-12 col-md-4">
-                          <img class="inner__name" src="img/svg/section-name-contact.svg" alt="About Me">
+                          <img class="inner__name" src="img/svg/section-name-contact.svg" loading="lazy" alt="About Me">
                         </div>
                         <div class="col-12 col-md-8">
                           <p class="inner__text">Let's get in touch. You can e-mail me or leave a request here. 
@@ -1898,14 +1873,12 @@
             <!-- Inner Media Content Start -->
             <div class="innermedia__content border-radius-l">
 
-              <!-- Bouncy Watch Component Container Start -->
-              <div id="bouncy-watch-container" class="innermedia__image innermedia-image-3">
-                <div id="bouncy-watch-placeholder">
+              <div class="innermedia__image innermedia-image-3">
+                <div>
                   <!-- Placeholder image or loading content -->
-                  <img src="img/placeholder.jpg" alt="Loading Bouncy Watch..." />
+                  <img src="img/placeholder.jpg" loading="lazy" alt="" />
                 </div>
               </div>
-              <!-- Bouncy Watch Component Container End -->
 
             </div>
             <!-- Inner Media Content End -->
@@ -2083,6 +2056,12 @@
   <script src="js/libs.min.js"></script>
   <script src="js/gallery-init.js"></script>
   <script src="js/custom.js"></script>
+  
+  <!-- Lusion Connectors Demo Start -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="/dist/lusion-connectors.bundle.js"></script>
+  <!-- Lusion Connectors Demo End -->
  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -2280,71 +2259,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Initialization Script -->
 <script>
-  let isBouncyWatchLoaded = false;
-  let isShoePickerLoaded = false;
   let isLusionConnectorsLoaded = false;
-  let isDiamondAppLoaded = false;
-  let isBaubleAppLoaded = false; // New variable to track if the bauble app is loaded
-  let bouncyObserver, shoeObserver, lusionObserver, diamondObserver, baubleObserver;
-
-  // Initialize Bouncy Watch
-  function initializeBouncyWatchObserver() {
-    const bouncyContainer = document.getElementById('bouncy-watch-container');
-
-    if (!bouncyContainer) return;
-
-    if ('IntersectionObserver' in window) {
-      bouncyObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!isBouncyWatchLoaded) {
-              loadBouncyWatch(bouncyContainer); // Initialize
-              isBouncyWatchLoaded = true;
-            } else {
-              bouncyContainer.classList.remove('paused');
-            }
-          } else {
-            bouncyContainer.classList.add('paused');
-          }
-        });
-      });
-
-      bouncyObserver.observe(bouncyContainer);
-    } else {
-      loadBouncyWatch(bouncyContainer); // Fallback for old browsers
-    }
-  }
-
-  // Initialize Shoe Picker
-  function initializeShoePickerObserver() {
-    const shoeContainer = document.getElementById('shoe-picker-container');
-
-    if (!shoeContainer) {
-      console.error('Shoe Picker container not found');
-      return;
-    }
-
-    if ('IntersectionObserver' in window) {
-      shoeObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!isShoePickerLoaded) {
-              loadShoePicker(shoeContainer); // Initialize
-              isShoePickerLoaded = true;
-            } else {
-              shoeContainer.classList.remove('paused');
-            }
-          } else {
-            shoeContainer.classList.add('paused');
-          }
-        });
-      });
-
-      shoeObserver.observe(shoeContainer);
-    } else {
-      loadShoePicker(shoeContainer); // Fallback for old browsers
-    }
-  }
+  let lusionObserver;
 
   // Initialize Lusion Connectors
   function initializeLusionConnectorsObserver() {
@@ -2377,51 +2293,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initialize Diamond App
-  function initializeDiamondAppObserver() {
-    const diamondContainer = document.getElementById('diamond-app-container');
-
-    if (!diamondContainer) {
-      console.error('Diamond App container not found');
-      return;
-    }
-
-    if ('IntersectionObserver' in window) {
-      diamondObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!isDiamondAppLoaded) {
-              loadDiamondApp(diamondContainer); // Initialize
-              isDiamondAppLoaded = true;
-            } else {
-              diamondContainer.classList.remove('paused');
-            }
-          } else {
-            diamondContainer.classList.add('paused');
-          }
-        });
-      });
-
-      diamondObserver.observe(diamondContainer);
-    } else {
-      loadDiamondApp(diamondContainer); // Fallback for old browsers
-    }
-  }
-
   // Initialize all observers on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', () => {
-    initializeBouncyWatchObserver();
-    initializeShoePickerObserver();
     initializeLusionConnectorsObserver();
-    initializeDiamondAppObserver();
   });
 </script>
 
-
-
-
-
-
-</body>
-
+  </body>
 </html>

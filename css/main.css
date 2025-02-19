@@ -782,7 +782,7 @@ p.additional-text a {
   letter-spacing: 0.06rem;
   color: #484d54;
 }
-p.light {
+.darkmode1 p.light {
   font-weight: 300;
   color: #ced8ef;
 }
