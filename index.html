@@ -847,9 +847,9 @@
 
               <!-- Lusion Connectors Component Container Start -->
               <div id="lusion-connectors-container" class="media__image">
-                <div id="lusion-connectors-placeholder">
+                <div>
                   <!-- Placeholder image or loading content -->
-                  <img src="img/placeholder.jpg" alt="Loading Lusion Connectors..." />
+                  <img src="img/placeholder.jpg" alt="" />
                 </div>
               </div>
               <!-- Lusion Connectors Component Container End -->
@@ -2259,45 +2259,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Initialization Script -->
 <script>
-  let isLusionConnectorsLoaded = false;
-  let lusionObserver;
+  document.addEventListener("DOMContentLoaded", function () {
+    let loaded = false;
 
-  // Initialize Lusion Connectors
-  function initializeLusionConnectorsObserver() {
-    const lusionContainer = document.getElementById('lusion-connectors-container');
+    function loadLusionConnectors() {
+      if (loaded) return;
+      loaded = true;
 
-    if (!lusionContainer) {
-      console.error('Lusion Connectors container not found');
-      return;
-    }
-
-    if ('IntersectionObserver' in window) {
-      lusionObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!isLusionConnectorsLoaded) {
-              loadLusionConnectors(lusionContainer); // Initialize
-              isLusionConnectorsLoaded = true;
-            } else {
-              lusionContainer.classList.remove('paused');
-            }
+      import("./dist/lusion-connectors.bundle.js")
+        .then(() => {
+          if (window.loadLusionConnectors) {
+            const container = document.getElementById("lusion-connectors-container");
+            window.loadLusionConnectors(container);
           } else {
-            lusionContainer.classList.add('paused');
+            console.error("loadLusionConnectors function not found!");
           }
-        });
-      });
-
-      lusionObserver.observe(lusionContainer);
-    } else {
-      loadLusionConnectors(lusionContainer); // Fallback for old browsers
+        })
+        .catch((err) => console.error("Error loading Lusion Connectors:", err));
     }
-  }
 
-  // Initialize all observers on DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', () => {
-    initializeLusionConnectorsObserver();
+    function checkVisibility() {
+      const demoContainer = document.getElementById("lusion-connectors-container");
+      if (!demoContainer) return;
+
+      const rect = demoContainer.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        loadLusionConnectors();
+      }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility();
   });
 </script>
+
+
+
 
   </body>
 </html>
